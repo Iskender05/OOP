@@ -1,0 +1,3 @@
+/home/upsik_/OOP/build/CMakeFiles/game.dir
+/home/upsik_/OOP/build/CMakeFiles/edit_cache.dir
+/home/upsik_/OOP/build/CMakeFiles/rebuild_cache.dir

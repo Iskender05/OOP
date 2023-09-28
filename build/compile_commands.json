@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/main.cpp.o -c /home/upsik_/OOP/code/main.cpp",
+  "file": "/home/upsik_/OOP/code/main.cpp",
+  "output": "CMakeFiles/game.dir/code/main.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/Player.cpp.o -c /home/upsik_/OOP/code/Player.cpp",
+  "file": "/home/upsik_/OOP/code/Player.cpp",
+  "output": "CMakeFiles/game.dir/code/Player.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/PlayerController.cpp.o -c /home/upsik_/OOP/code/PlayerController.cpp",
+  "file": "/home/upsik_/OOP/code/PlayerController.cpp",
+  "output": "CMakeFiles/game.dir/code/PlayerController.cpp.o"
+}
+]

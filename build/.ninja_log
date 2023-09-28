@@ -1,0 +1,6 @@
+# ninja log v5
+1	32	1695931097303747143	build.ninja	d68fd284f44d6ac7
+3	395	1695930953255025665	CMakeFiles/game.dir/code/main.cpp.o	6ba45442c305e8f
+3	394	1695930953251692364	CMakeFiles/game.dir/code/Player.cpp.o	a4193f40ae78c665
+3	52	1695930952911695681	CMakeFiles/game.dir/code/PlayerController.cpp.o	361328e4ac197971
+395	504	1695930953361691292	game	864433be4899cf19

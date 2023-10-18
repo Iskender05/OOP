@@ -1,11 +1,13 @@
 #ifndef PLAYER_CONTROLLER_H
 #define PLAYER_CONTROLLER_H
 
-#include "../head/Player.h"
-#include "../head/Directions.h"
+#include "../head/player.h"
+#include "../head/directions.h"
+//#include "../head/tailmap.h"
 
 
-class PlayerController{
+class PlayerController
+{
 private:
     Player* player;
 

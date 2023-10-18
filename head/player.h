@@ -21,20 +21,31 @@ typedef struct __Helth
     __Helth () : hp ( MAX_HEALTH ), damage ( MIN_DAMAGE ) {}
 } helth_t;
 
+
 typedef struct __Position
 {
     int64_t x;
     int64_t y;
 
     __Position () : x ( START_X ), y ( START_Y ) {}
+    __Position ( int64_t x, int64_t y ) : x ( x ), y ( y ) {}
+    void operator = ( __Position pos ) { x = pos.x; y = pos.y; }
+
+    void set_pos ( int64_t x, int64_t y ) { this->x = x; this->y = y; }
 } pos_t;
 
-class Player{
+class Player
+{
+    friend class PlayerController;
+ 
     private:
         int lvl;
 
         helth_t hitpoint;
         pos_t position;
+
+        void moveTo(int newX, int newY);
+        void moveTo(pos_t newPosition);
 
     public:
         Player();
@@ -48,9 +59,6 @@ class Player{
         void UpLvl();
 
         void takeDamage(int amouth);
-        
-        void moveTo(int newX, int newY);
-        void moveTo(pos_t newPosition);
 
         pos_t getPostion ();
 };

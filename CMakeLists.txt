@@ -4,7 +4,9 @@ project ( game )
 
 include_directories ( head/ )
 set (SOURCE code/main.cpp
-            code/Player.cpp
-            code/PlayerController.cpp )
+            code/player.cpp
+            code/playerController.cpp 
+            code/tail.cpp
+            code/tailmap.cpp)
 
 add_executable ( ${PROJECT_NAME} ${SOURCE} )

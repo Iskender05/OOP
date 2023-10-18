@@ -7,14 +7,26 @@
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/Player.cpp.o -c /home/upsik_/OOP/code/Player.cpp",
-  "file": "/home/upsik_/OOP/code/Player.cpp",
-  "output": "CMakeFiles/game.dir/code/Player.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/player.cpp.o -c /home/upsik_/OOP/code/player.cpp",
+  "file": "/home/upsik_/OOP/code/player.cpp",
+  "output": "CMakeFiles/game.dir/code/player.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/PlayerController.cpp.o -c /home/upsik_/OOP/code/PlayerController.cpp",
-  "file": "/home/upsik_/OOP/code/PlayerController.cpp",
-  "output": "CMakeFiles/game.dir/code/PlayerController.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/playerController.cpp.o -c /home/upsik_/OOP/code/playerController.cpp",
+  "file": "/home/upsik_/OOP/code/playerController.cpp",
+  "output": "CMakeFiles/game.dir/code/playerController.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/tail.cpp.o -c /home/upsik_/OOP/code/tail.cpp",
+  "file": "/home/upsik_/OOP/code/tail.cpp",
+  "output": "CMakeFiles/game.dir/code/tail.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/tailmap.cpp.o -c /home/upsik_/OOP/code/tailmap.cpp",
+  "file": "/home/upsik_/OOP/code/tailmap.cpp",
+  "output": "CMakeFiles/game.dir/code/tailmap.cpp.o"
 }
 ]

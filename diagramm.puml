@@ -1,0 +1,28 @@
+@startuml diagramm
+
+class Tail {
+  - type: TailType
+  --
+  + Tail(TailType type = TailType::NORM)
+  + set_type(type: TailType)
+  + get_type(): TailType
+}
+
+class Tailmap {
+  - map: Tail**
+  - width: uint16_t
+  - height: uint16_t
+  - spawn: pos_t
+  - end_game: pos_t
+  --
+  + get_Width(): uint16_t
+  + get_Height(): uint16_t
+  + get_Spawn(): pos_t
+  + get_EndGame(): pos_t
+  + get_tail(position: pos_t): Tail&
+  + Tailmap(width: uint16_t, height: uint16_t)
+  + Tailmap(width: uint16_t, height: uint16_t, spawn: pos_t, end_game: pos_t)
+}
+Tailmap *-- Tail : map
+
+@enduml

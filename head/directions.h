@@ -2,7 +2,7 @@
 #define DIRECTIONS_H
 
 enum class Direction : int {
-    W_key = 0,
+    W_key,
     A_key,
     S_key,
     D_key

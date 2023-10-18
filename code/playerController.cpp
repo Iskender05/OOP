@@ -1,9 +1,18 @@
-#include "../head/Player.h"
-#include "../head/PlayerController.h"
-#include "../head/Directions.h"
+#include<iostream>
+#include "../head/player.h"
+#include "../head/playerController.h"
+#include "../head/directions.h"
+//#include "../head/tailmap.h"
 
 
-PlayerController::PlayerController(Player* player) : player(player) {}
+PlayerController::PlayerController(Player* player) : player(player) {
+    if (player != nullptr){
+        this->player = player;
+    }
+    else{
+        puts("NULLPTR");
+    }
+}
 
 void PlayerController::move(Direction direction){
     pos_t currentPosition = player->getPostion();

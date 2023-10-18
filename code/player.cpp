@@ -1,5 +1,5 @@
 #include<iostream>
-#include"../head/Player.h"
+#include"../head/player.h"
 
 
 Player::Player() 
@@ -44,16 +44,15 @@ void Player::takeDamage(int amount){
     }
 }
 
+/** TODO: jijioj */
 void Player::moveTo(int newX, int newY){
-    position.x = newX;
-    position.y = newY;
+    position.set_pos ( newX, newY );
 }
 
 void Player::moveTo( pos_t newPosition ){
-    position.x = newPosition.x;
-    position.y = newPosition.y;
+    position = newPosition;
 }
 
-pos_t Player::getPostion (){
+pos_t Player::getPostion(){
     return position;
 }

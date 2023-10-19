@@ -3,19 +3,19 @@
 
 #include "../head/player.h"
 #include "../head/directions.h"
-//#include "../head/tailmap.h"
-
+#include "../head/tailmap.h"
 
 class PlayerController
 {
 private:
     Player* player;
+    Tailmap* map;
 
     const int move_value = 1;
     const int health_value = 1;
 
 public:
-    PlayerController(Player* Player);
+    PlayerController(Player* Player, Tailmap* map);
     
     void move(Direction direction);
     void dinamic_health();

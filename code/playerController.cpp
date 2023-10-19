@@ -2,16 +2,17 @@
 #include "../head/player.h"
 #include "../head/playerController.h"
 #include "../head/directions.h"
-//#include "../head/tailmap.h"
 
 
-PlayerController::PlayerController(Player* player) : player(player) {
+PlayerController::PlayerController(Player* player, Tailmap* map) : player(player), map(map) {
     if (player != nullptr){
         this->player = player;
     }
     else{
         puts("NULLPTR");
     }
+
+    player->moveTo ( map->get_Spawn () );
 }
 
 void PlayerController::move(Direction direction){
@@ -21,22 +22,34 @@ void PlayerController::move(Direction direction){
     {
         case Direction::W_key:
         {
-            player->moveTo(currentPosition.x, currentPosition.y - move_value);
+            pos_t next_pos = { currentPosition.x, currentPosition.y - move_value };
+            if ( map->at ( next_pos ).get_type () != TailType::WALL )
+                player->moveTo( next_pos );
+            
             break;
         }
         case Direction::S_key:
         {
-            player->moveTo(currentPosition.x, currentPosition.y + move_value);
+            pos_t next_pos = { currentPosition.x, currentPosition.y + move_value };
+            if ( map->at ( next_pos ).get_type () != TailType::WALL )
+                player->moveTo( next_pos );
+            
             break;
         }
         case Direction::A_key:
         {
-            player->moveTo(currentPosition.x - move_value, currentPosition.y);
+            pos_t next_pos = { currentPosition.x - move_value , currentPosition.y };
+            if ( map->at ( next_pos ).get_type () != TailType::WALL )
+                player->moveTo( next_pos );
+            
             break;
         }
         case Direction::D_key:
         {
-            player->moveTo(currentPosition.x + move_value, currentPosition.y);
+            pos_t next_pos = { currentPosition.x + move_value , currentPosition.y };
+            if ( map->at ( next_pos ).get_type () != TailType::WALL )
+                player->moveTo( next_pos );
+            
             break;
         }
         default:{

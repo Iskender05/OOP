@@ -4,6 +4,7 @@
 #include "tailmap.h"
 
 #include <string.h>
+#include <iostream>
 
 uint16_t Tailmap::get_Width(){
     return width;
@@ -60,16 +61,19 @@ Tailmap::Tailmap ( uint16_t width, uint16_t height, pos_t spawn, pos_t end_game 
 Tailmap::Tailmap(const Tailmap &tmp)
     : Tailmap ( tmp.width, tmp.height, tmp.spawn, tmp.end_game )
 {
+    std::cout << "Copy class" << std::endl;
+
     copy_map ( tmp );
 }
 
 void Tailmap::swap_map ( const Tailmap &tmp )
 {
-    memcpy ( map, tmp.map, height );
-    for ( uint8_t i = 0; i < height; i++ )
-        memcpy ( map[i], tmp.map[i], width );
+    // memcpy ( map, tmp.map, height );
+    // for ( uint8_t i = 0; i < height; i++ )
+    //     memcpy ( map[i], tmp.map[i], width );
+    map = tmp.map;
 
-    copy_map ( tmp );
+    // copy_map ( tmp );
 }
 
 void Tailmap::copy_map ( const Tailmap &tmp )
@@ -83,40 +87,55 @@ void Tailmap::operator=(const Tailmap &tmp)
 {
     del_map ();
 
-    create_map ();
-    
-    copy_map ( tmp );
-
     width = tmp.width;
     height = tmp.height;
+
+    create_map ();
+
+    copy_map ( tmp );
 
     spawn = tmp.spawn;
     end_game = tmp.end_game;
 }
 
 Tailmap::Tailmap(Tailmap &&tmp)
-    : map ( tmp.map )
-    , width ( tmp.width ), height ( tmp.height )
+    : width ( tmp.width ), height ( tmp.height )
     , spawn ( tmp.spawn ), end_game ( tmp.spawn )
 {
+    std::cout << "Move class" << std::endl;
+
+    width = tmp.width;
+    height = tmp.height;
+    spawn = tmp.spawn;
+    end_game = tmp.end_game;
+
+    // create_map ();
+    swap_map ( tmp );
+
     tmp.map = nullptr;
 
-    width = height = 0;
-    spawn = { 0, 0 };
-    end_game = { 0, 0 };
+    tmp.width = tmp.height = 0;
+    tmp.spawn = { 0, 0 };
+    tmp.end_game = { 0, 0 };
 }
 
 void Tailmap::operator=(Tailmap &&tmp)
 {
     del_map ();
 
+    width = tmp.width;
+    height = tmp.height;
+    spawn = tmp.spawn;
+    end_game = tmp.end_game;
+
+    // create_map ();
     swap_map ( tmp );
 
     tmp.map = nullptr;
 
-    width = height = 0;
-    spawn = { 0, 0 };
-    end_game = { 0, 0 };
+    tmp.width = tmp.height = 0;
+    tmp.spawn = { 0, 0 };
+    tmp.end_game = { 0, 0 };
 }
 
 Tailmap::~Tailmap()
@@ -126,6 +145,8 @@ Tailmap::~Tailmap()
 
 void Tailmap::del_map ( void )
 {
+    std::cout << "Delete class" << std::endl;
+
     for ( uint16_t i = 0; i < height; i++ )
         delete map[i];
 

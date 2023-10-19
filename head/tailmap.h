@@ -38,12 +38,12 @@ public:
     Tail& at ( uint16_t width, uint16_t height );
     Tail& at ( pos_t position );
 
-    Tailmap( void ) = default;
-    Tailmap( uint16_t width, uint16_t height );
+    Tailmap ( void ) = default;
+    Tailmap ( uint16_t width, uint16_t height );
     Tailmap ( uint16_t width , uint16_t height, pos_t spawn, pos_t end_game );
 
-    Tailmap ( const Tailmap& tmp );
-    void operator = ( const Tailmap& tmp );
+    Tailmap ( const Tailmap& tmp );                 // Tailmap map { Tailmap ( 2, 3 ) }
+    void operator = ( const Tailmap& tmp );         // Tailmap map = Tailmap { 2, 3 }
 
     Tailmap ( Tailmap&& tmp );
     void operator = ( Tailmap&& tmp );

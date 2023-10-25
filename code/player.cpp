@@ -5,7 +5,7 @@
 Player::Player() 
     : hitpoint(), lvl(START_LVL), position()
 {}
-
+ 
 void Player::setHP(const uint8_t newHealth, const uint8_t newDamage ) {
     if(newHealth >= MIN_HEALTH && newHealth <= MAX_HEALTH)
         hitpoint.hp = newHealth;

@@ -7,6 +7,11 @@ set (SOURCE code/main.cpp
             code/player.cpp
             code/playerController.cpp 
             code/tail.cpp
-            code/tailmap.cpp)
+            code/tailmap.cpp
+            code/positive_event.cpp
+            code/negative_event.cpp
+            code/move_event.cpp
+            code/game_level.cpp
+            code/level_generator.cpp)
 
 add_executable ( ${PROJECT_NAME} ${SOURCE} )

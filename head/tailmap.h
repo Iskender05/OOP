@@ -4,7 +4,7 @@
 #include "../head/tail.h"
 #include "../head/tailtype.h"
 #include "../head/player.h"
-
+  
 #define DEFAULT_WIDTH 255
 #define DEFAULT_HEIGHT 255
 #define MIN_WIDTH 1

@@ -28,5 +28,35 @@
   "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/tailmap.cpp.o -c /home/upsik_/OOP/code/tailmap.cpp",
   "file": "/home/upsik_/OOP/code/tailmap.cpp",
   "output": "CMakeFiles/game.dir/code/tailmap.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/positive_event.cpp.o -c /home/upsik_/OOP/code/positive_event.cpp",
+  "file": "/home/upsik_/OOP/code/positive_event.cpp",
+  "output": "CMakeFiles/game.dir/code/positive_event.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/negative_event.cpp.o -c /home/upsik_/OOP/code/negative_event.cpp",
+  "file": "/home/upsik_/OOP/code/negative_event.cpp",
+  "output": "CMakeFiles/game.dir/code/negative_event.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/move_event.cpp.o -c /home/upsik_/OOP/code/move_event.cpp",
+  "file": "/home/upsik_/OOP/code/move_event.cpp",
+  "output": "CMakeFiles/game.dir/code/move_event.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/game_level.cpp.o -c /home/upsik_/OOP/code/game_level.cpp",
+  "file": "/home/upsik_/OOP/code/game_level.cpp",
+  "output": "CMakeFiles/game.dir/code/game_level.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/level_generator.cpp.o -c /home/upsik_/OOP/code/level_generator.cpp",
+  "file": "/home/upsik_/OOP/code/level_generator.cpp",
+  "output": "CMakeFiles/game.dir/code/level_generator.cpp.o"
 }
 ]

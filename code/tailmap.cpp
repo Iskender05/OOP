@@ -1,7 +1,7 @@
 #include "../head/tailmap.h"
 #include "../head/player.h"
 #include "../head/tail.h"
-#include "tailmap.h"
+//#include "tailmap.h"
 
 #include <string.h>
 #include <iostream>

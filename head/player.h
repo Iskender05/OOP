@@ -44,8 +44,8 @@ class Player
         helth_t hitpoint;
         pos_t position;
 
-        void moveTo(int newX, int newY);
-        void moveTo(pos_t newPosition);
+        //void moveTo(int newX, int newY);
+        //void moveTo(pos_t newPosition);
 
     public:
         Player();
@@ -61,6 +61,10 @@ class Player
         void takeDamage(int amouth);
 
         pos_t getPostion ();
-};
+
+        void moveTo(pos_t newPosition);
+        void moveTo(int newX, int newY);
+        
+}; 
 
 #endif

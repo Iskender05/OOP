@@ -1,7 +1,7 @@
 #ifndef NEGATIVE_EVENT_H
 #define NEGATIVE_EVENT_H
 
-#include "game_event.h"
+#include "../head/game_event.h"
 
 class NegativeEvent : public GameEvent {
 public:

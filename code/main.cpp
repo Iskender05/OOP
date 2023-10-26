@@ -12,6 +12,8 @@
 #include "../head/positive_event.h"
 #include "../head/move_event.h"
 #include "../head/level_generator.h"
+#include "../head/fieldRenderer.h"
+
 
 int main() {
     Player player;
@@ -22,9 +24,7 @@ int main() {
     map.at(pos_t(2, 8)) = TailType::AXID;
     map.at(pos_t(2, 8)) = new NegativeEvent;
     map.at(pos_t(2, 6)) = TailType::WATER;
-    map.at(pos_t(2, 6)) = new PositiveEvent;
-    
-    
+    //map.at(pos_t(2, 6)) = new PositiveEvent;
     
     
     // Инициализация генератора случайных чисел
@@ -48,23 +48,23 @@ int main() {
     // Пример:
     playerController1.move(Direction::D_key);
     playerController1.move(Direction::S_key);
+    playerController1.move(Direction::A_key);
+    playerController1.move(Direction::W_key);
+
     playerController2.move(Direction::D_key);
     playerController2.move(Direction::S_key);
+    playerController2.move(Direction::A_key);
+    playerController2.move(Direction::W_key);
     
+
+     //Tailmap map = generateBorderedMap(width, height);
     
+
+    FieldRenderer::render(map);
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
     
     // map.at(pos_t(2, 8)).get_event()->applyEvent( player, map.at(pos_t(2, 8)) );
 
@@ -84,22 +84,6 @@ int main() {
 
     controller.move(Direction::W_key);
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     // std::cout << "Player Info:" << std::endl;

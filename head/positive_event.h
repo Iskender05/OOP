@@ -1,7 +1,7 @@
 #ifndef POSITIVE_EVENT_H
 #define POSITIVE_EVENT_H
 
-#include "game_event.h"
+#include "../head/game_event.h"
 
 class PositiveEvent: public GameEvent
 {

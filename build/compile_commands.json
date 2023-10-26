@@ -58,5 +58,11 @@
   "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/level_generator.cpp.o -c /home/upsik_/OOP/code/level_generator.cpp",
   "file": "/home/upsik_/OOP/code/level_generator.cpp",
   "output": "CMakeFiles/game.dir/code/level_generator.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/fieldRenderer.cpp.o -c /home/upsik_/OOP/code/fieldRenderer.cpp",
+  "file": "/home/upsik_/OOP/code/fieldRenderer.cpp",
+  "output": "CMakeFiles/game.dir/code/fieldRenderer.cpp.o"
 }
 ]

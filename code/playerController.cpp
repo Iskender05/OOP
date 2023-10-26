@@ -2,7 +2,7 @@
 #include "../head/player.h"
 #include "../head/playerController.h"
 #include "../head/directions.h"
-#include "game_event.h"
+#include "../head/game_event.h"
  
 PlayerController::PlayerController(Player* player, Tailmap* map) : player(player), map(map) {
     if (player != nullptr){

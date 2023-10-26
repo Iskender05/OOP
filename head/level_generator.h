@@ -1,7 +1,7 @@
 #ifndef LEVEL_GENERATOR_H
 #define LEVEL_GENERATOR_H
 
-#include "game_level.h"
+#include "../head/game_level.h"
 
 class LevelGenerator {
 public:

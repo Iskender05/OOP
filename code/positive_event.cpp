@@ -10,4 +10,7 @@ void PositiveEvent::applyEvent(Player& player, Tail& tail){
 
     int currentLevel = player.getLvl();
     player.setLvl(currentLevel + 1);
+
+    // Вывод текущего здоровья игрока
+    std::cout << "Current HP: " << (int)player.getHP().hp << std::endl;
 }

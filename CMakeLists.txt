@@ -12,6 +12,7 @@ set (SOURCE code/main.cpp
             code/negative_event.cpp
             code/move_event.cpp
             code/game_level.cpp
-            code/level_generator.cpp)
+            code/level_generator.cpp
+            code/fieldRenderer.cpp)
 
 add_executable ( ${PROJECT_NAME} ${SOURCE} )

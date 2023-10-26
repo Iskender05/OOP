@@ -119,6 +119,13 @@ build CMakeFiles/game.dir/code/level_generator.cpp.o: CXX_COMPILER__game_unscann
   OBJECT_DIR = CMakeFiles/game.dir
   OBJECT_FILE_DIR = CMakeFiles/game.dir/code
 
+build CMakeFiles/game.dir/code/fieldRenderer.cpp.o: CXX_COMPILER__game_unscanned_Debug /home/upsik_/OOP/code/fieldRenderer.cpp || cmake_object_order_depends_target_game
+  DEP_FILE = CMakeFiles/game.dir/code/fieldRenderer.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/head
+  OBJECT_DIR = CMakeFiles/game.dir
+  OBJECT_FILE_DIR = CMakeFiles/game.dir/code
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target game
@@ -127,7 +134,7 @@ build CMakeFiles/game.dir/code/level_generator.cpp.o: CXX_COMPILER__game_unscann
 #############################################
 # Link the executable game
 
-build game: CXX_EXECUTABLE_LINKER__game_Debug CMakeFiles/game.dir/code/main.cpp.o CMakeFiles/game.dir/code/player.cpp.o CMakeFiles/game.dir/code/playerController.cpp.o CMakeFiles/game.dir/code/tail.cpp.o CMakeFiles/game.dir/code/tailmap.cpp.o CMakeFiles/game.dir/code/positive_event.cpp.o CMakeFiles/game.dir/code/negative_event.cpp.o CMakeFiles/game.dir/code/move_event.cpp.o CMakeFiles/game.dir/code/game_level.cpp.o CMakeFiles/game.dir/code/level_generator.cpp.o
+build game: CXX_EXECUTABLE_LINKER__game_Debug CMakeFiles/game.dir/code/main.cpp.o CMakeFiles/game.dir/code/player.cpp.o CMakeFiles/game.dir/code/playerController.cpp.o CMakeFiles/game.dir/code/tail.cpp.o CMakeFiles/game.dir/code/tailmap.cpp.o CMakeFiles/game.dir/code/positive_event.cpp.o CMakeFiles/game.dir/code/negative_event.cpp.o CMakeFiles/game.dir/code/move_event.cpp.o CMakeFiles/game.dir/code/game_level.cpp.o CMakeFiles/game.dir/code/level_generator.cpp.o CMakeFiles/game.dir/code/fieldRenderer.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/game.dir
   POST_BUILD = :

@@ -1,10 +1,8 @@
-// game_level.cpp
-
-#include "game_level.h"
-#include "tailmap.h"
-#include "tailtype.h"
-#include "positive_event.h"
-#include "negative_event.h"
+#include "../head/game_level.h"
+#include "../head/tailmap.h"
+#include "../head/tailtype.h"
+#include "../head/positive_event.h"
+#include "../head/negative_event.h"
 #include <cstdlib>
 
 void EasyLevel::createLevel(Tailmap& map) {

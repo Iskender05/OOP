@@ -1,8 +1,8 @@
 #ifndef GAME_EVENT_H
 #define GAME_EVENT_H
   
-#include "player.h"
-#include "tail.h"
+#include "../head/player.h"
+#include "../head/tail.h"
 
 class Tail;
 class Player;

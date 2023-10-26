@@ -1,7 +1,7 @@
 #ifndef MOVE_EVENT_H
 #define MOVE_EVENT_H
 
-#include "game_event.h"
+#include "../head/game_event.h"
 
 class MoveEvent : public GameEvent {
 public:

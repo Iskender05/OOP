@@ -9,9 +9,9 @@ public:
     PositiveEvent () = default;
     virtual ~PositiveEvent () = default;
     
-    void applyEvent(Player& Player, Tail& tail) override;
+    void applyEvent(PlayerController& pc, Tail& tail) override;
 };
-
+ 
 
  
 #endif

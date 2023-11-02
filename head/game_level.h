@@ -2,7 +2,7 @@
 #define GAME_LEVEL_H
 
 #include "../head/tailmap.h"
-
+ 
 class GameLevel
 {
 public:

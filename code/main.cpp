@@ -16,17 +16,6 @@
 
 
 int main() {
-    Player player;
-    
-    Tailmap map { Tailmap{23, 34, {2, 7}, {5, 6}} };
-    map.at(pos_t(3, 3)) = TailType::WALL;
-    map.at(pos_t(5, 5)) = TailType::WALL;
-    map.at(pos_t(2, 8)) = TailType::AXID;
-    map.at(pos_t(2, 8)) = new NegativeEvent;
-    map.at(pos_t(2, 6)) = TailType::WATER;
-    //map.at(pos_t(2, 6)) = new PositiveEvent;
-    
-    
     // Инициализация генератора случайных чисел
     std::srand(static_cast<unsigned>(std::time(nullptr)));
 
@@ -34,62 +23,62 @@ int main() {
     HardLevel hardLevel;
 
     // Создание уровней
-    Tailmap easyMap = LevelGenerator::createLevel(easyLevel, 10, 10);
-    Tailmap hardMap = LevelGenerator::createLevel(hardLevel, 10, 10);
+    Tailmap easyMap = LevelGenerator::createLevel(easyLevel, 20, 20);
+    Tailmap hardMap = LevelGenerator::createLevel(hardLevel, 20, 20);
 
-    // Создание игроков и их контроллеров
-    Player player1;
-    PlayerController playerController1(&player1, &easyMap);
+    // // Создание игроков и их контроллеров
+    // Player player1;
+    // PlayerController playerController1(&player1, &easyMap);
 
     Player player2;
     PlayerController playerController2(&player2, &hardMap);
 
-    // Ваша логика для игры на уровнях
-    // Пример:
-    playerController1.move(Direction::D_key);
-    playerController1.move(Direction::S_key);
-    playerController1.move(Direction::A_key);
-    playerController1.move(Direction::W_key);
+    //  логика для игры на уровнях
+    // playerController1.move(Direction::D_key);
+    // playerController1.move(Direction::S_key);
+    // playerController1.move(Direction::A_key);
+    // playerController1.move(Direction::W_key);
 
-    playerController2.move(Direction::D_key);
-    playerController2.move(Direction::S_key);
-    playerController2.move(Direction::A_key);
-    playerController2.move(Direction::W_key);
+    // playerController2.move(Direction::D_key);
+    // playerController2.move(Direction::S_key);
+    // playerController2.move(Direction::A_key);
+    // playerController2.move(Direction::W_key);
+    
+    FieldRenderer::render(hardMap, playerController2);
+    bool run = true;
+    while ( run )
+    {
+        char key = getchar ();
+
+        if ( key == 'q' )
+            run = false;
+
+        switch ( key )
+        {
+        case 'w':
+            playerController2.move(Direction::W_key);
+            break;
+        
+        case 'a':
+            playerController2.move(Direction::A_key);
+            break;
+
+        case 'd':
+            playerController2.move(Direction::D_key);
+            break;
+
+        case 's':
+            playerController2.move(Direction::S_key);
+            break;
+        }
+
+        // FieldRenderer::clear_screen();
+        FieldRenderer::render(hardMap, playerController2);
+    }
     
 
-     //Tailmap map = generateBorderedMap(width, height);
-    
-
-    FieldRenderer::render(map);
-    
-
-
-
-    
-    // map.at(pos_t(2, 8)).get_event()->applyEvent( player, map.at(pos_t(2, 8)) );
-
-    // Tailmap map1 = Tailmap { 2, 3 };
-    // Tailmap map2 = map1;
-    
-    // std::cout << map1.get_Height() << std::endl;
-    // std::cout << map1.get_Width() << std::endl;
-
-    // std::cout << map2.get_Height() << std::endl;
-    // std::cout << map2.get_Width() << std::endl;
-
-    PlayerController controller(&player, &map);
-    
-    player.setHP(10,50);
-    player.setLvl(5);
-
-    controller.move(Direction::W_key);
-
-    
-    
-    // std::cout << "Player Info:" << std::endl;
-    // std::cout << "Health: " << (int)player.getHP().hp << "\nDamage: " << (int)player.getHP().damage << std::endl;
-    // std::cout << "Level: " << player.getLvl() << std::endl;
-    // std::cout << "Position: (" << player.getPostion().x << ", " << player.getPostion().y << ")" << std::endl;
+    // FieldRenderer::render(easyMap);
+    // FieldRenderer::render(hardMap);
 
     return 0;
 }

@@ -8,7 +8,7 @@ public:
     NegativeEvent () = default;
     virtual ~NegativeEvent () = default;
 
-    void applyEvent(Player& player, Tail& tail) override;
+    void applyEvent(PlayerController& pc, Tail& tail) override;
 };
 
 #endif

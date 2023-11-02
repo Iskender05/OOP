@@ -3,28 +3,22 @@
 #include <ctime>
 
 
-void FieldRenderer::render(Tailmap& map)
+void FieldRenderer::render(Tailmap& map, PlayerController& pc)
 {
-    // Заполнение оставшегося пространства случайными типами клеток
-    for (uint16_t i = 1; i < map.get_Height() - 1; i++) {
-        for (uint16_t j = 1; j < map.get_Width() - 1; j++) {
-            // Вероятность появления кислоты или воды в этой клетке
-            int randValue = std::rand() % 100;
-
-            if (randValue < 20) {
-                map.at(j, i) = TailType::AXID;
-            } else if (randValue < 40) {
-                map.at(j, i) = TailType::WATER;
-            } else {
-                map.at(j, i) = TailType::NORM;
-            }
-        }
-    }
-   
-   
-   
     for (uint16_t i = 0; i < map.get_Height(); i++){
         for (uint16_t j = 0; j < map.get_Width(); j++){
+            if ( pc.get_player()->getPostion() == pos_t(j, i) )
+            {
+                std::cout << "@";
+                break;
+            }
+
+            if ( map.get_EndGame() == pos_t(j, i) )
+            {
+                std::cout << "G";
+                break;
+            }
+
             switch (map.at(j, i).get_type())
             {
                 case TailType::NORM:
@@ -50,7 +44,6 @@ void FieldRenderer::render(Tailmap& map)
                 default:{
                     std::cout << " ";
                 }
-
             }
         }
         std::cout << std::endl;
@@ -63,7 +56,7 @@ Tailmap generateBorderedMap(uint16_t width, uint16_t height) {
 
     Tailmap map(width, height);
 
-    // Заполнение внешнего контура стенами
+    // Заполнение  контура стенами
     for (uint16_t i = 0; i < height; i++) {
         map.at(0, i) = TailType::WALL;
         map.at(width - 1, i) = TailType::WALL;
@@ -90,4 +83,9 @@ Tailmap generateBorderedMap(uint16_t width, uint16_t height) {
     }
 
     return map;
+}
+
+void FieldRenderer::clear_screen()
+{
+    system ( "clear" );
 }

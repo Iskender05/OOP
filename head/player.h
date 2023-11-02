@@ -19,6 +19,9 @@ typedef struct __Helth
     uint8_t damage;
 
     __Helth () : hp ( MAX_HEALTH ), damage ( MIN_DAMAGE ) {}
+
+    bool operator == (__Helth current_hp){ return damage == current_hp.damage && hp == current_hp.damage ? true : false ; }
+    
 } helth_t;
 
 
@@ -30,6 +33,7 @@ typedef struct __Position
     __Position () : x ( START_X ), y ( START_Y ) {}
     __Position ( int64_t x, int64_t y ) : x ( x ), y ( y ) {}
     void operator = ( __Position pos ) { x = pos.x; y = pos.y; }
+    bool operator == ( __Position pos ) { return x == pos.x && y == pos.y ? true : false; }
 
     void set_pos ( int64_t x, int64_t y ) { this->x = x; this->y = y; }
 } pos_t;

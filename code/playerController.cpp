@@ -1,8 +1,6 @@
 #include<iostream>
-#include "../head/player.h"
 #include "../head/playerController.h"
 #include "../head/directions.h"
-#include "../head/game_event.h"
  
 PlayerController::PlayerController(Player* player, Tailmap* map) : player(player), map(map) {
     if (player != nullptr){
@@ -27,7 +25,7 @@ void PlayerController::checkAndApplyEvent(){
     GameEvent* event = currentTail.get_event();
 
     if ( event != nullptr )
-        event->applyEvent ( *player, currentTail );
+        event->applyEvent ( *this, currentTail );
 }
 
 void PlayerController::move(Direction direction){
@@ -84,6 +82,11 @@ void PlayerController::move(Direction direction){
         }
     }
 
+}
+
+Player* PlayerController::get_player ( void )
+{
+    return this->player;
 }
 
 void PlayerController::dinamic_health() {

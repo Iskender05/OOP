@@ -1,17 +1,16 @@
 #ifndef GAME_EVENT_H
 #define GAME_EVENT_H
-  
-#include "../head/player.h"
-#include "../head/tail.h"
+   
+#include "../head/playerController.h"
 
 class Tail;
-class Player;
+class PlayerController;
 
 class GameEvent
 {
 public:
     GameEvent () = default;
-    virtual void applyEvent(Player& Player, Tail& tail) = 0;
+    virtual void applyEvent(PlayerController& pc, Tail& tail) = 0;
     virtual ~GameEvent() = default;
 };
 

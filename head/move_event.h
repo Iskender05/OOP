@@ -8,8 +8,8 @@ public:
     MoveEvent () = default;
     virtual ~MoveEvent () = default;
 
-    void applyEvent(Player& player, Tail& tail) override;
+    void applyEvent(PlayerController& pc, Tail& tail) override;
 };
 
 #endif
- 
+  

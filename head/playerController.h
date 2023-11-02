@@ -4,6 +4,9 @@
 #include "../head/player.h"
 #include "../head/directions.h"
 #include "../head/tailmap.h"
+#include "../head/game_event.h"
+
+class Tailmap;
 
 class PlayerController
 {
@@ -20,6 +23,8 @@ public:
     void move(Direction direction);
     void dinamic_health();
     void dinamic_lvl(int lvl_value);
+
+    Player* get_player ( void );
 
     void checkAndApplyEvent();
 };

@@ -12,6 +12,7 @@
 #define MIN_HEIGHT 1
 #define MAX_HEIGHT 65535
 
+class Tail;
 
 class Tailmap
 {

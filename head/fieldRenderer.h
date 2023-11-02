@@ -6,8 +6,8 @@
 class FieldRenderer
 {
 public:
-    static void render(Tailmap& map);
-
+    static void render(Tailmap& map, PlayerController& pc);
+    static void clear_screen();
 };
 
 

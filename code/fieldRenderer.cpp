@@ -10,15 +10,15 @@ void FieldRenderer::render(Tailmap& map, PlayerController& pc)
             if ( pc.get_player()->getPostion() == pos_t(j, i) )
             {
                 std::cout << "@";
-                break;
+                continue;
             }
 
             if ( map.get_EndGame() == pos_t(j, i) )
             {
                 std::cout << "G";
-                break;
+                continue;
             }
-
+            
             switch (map.at(j, i).get_type())
             {
                 case TailType::NORM:

@@ -14,7 +14,6 @@
 #include "../head/level_generator.h"
 #include "../head/fieldRenderer.h"
 
-
 int main() {
     // Инициализация генератора случайных чисел
     std::srand(static_cast<unsigned>(std::time(nullptr)));
@@ -28,30 +27,31 @@ int main() {
 
     // // Создание игроков и их контроллеров
     // Player player1;
-    // PlayerController playerController1(&player1, &easyMap);
+    // PlayerController playerController1(&player1, &easyMap);     // Для изи мапы 
 
     Player player2;
-    PlayerController playerController2(&player2, &hardMap);
+    PlayerController playerController2(&player2, &hardMap);        // Для хард мапы 
 
-    //  логика для игры на уровнях
-    // playerController1.move(Direction::D_key);
-    // playerController1.move(Direction::S_key);
-    // playerController1.move(Direction::A_key);
-    // playerController1.move(Direction::W_key);
-
-    // playerController2.move(Direction::D_key);
-    // playerController2.move(Direction::S_key);
-    // playerController2.move(Direction::A_key);
-    // playerController2.move(Direction::W_key);
-    
     FieldRenderer::render(hardMap, playerController2);
     bool run = true;
+    uint64_t line_size = 0;
     while ( run )
     {
         char key = getchar ();
+        line_size++;
+
+        if ( line_size > 1 && key != '\n' )
+            continue;
+
+        if ( key == '\n' ){
+            line_size = 0;
+            continue;
+        }
 
         if ( key == 'q' )
             run = false;
+
+        FieldRenderer::clear_screen();
 
         switch ( key )
         {
@@ -72,13 +72,8 @@ int main() {
             break;
         }
 
-        // FieldRenderer::clear_screen();
         FieldRenderer::render(hardMap, playerController2);
     }
-    
-
-    // FieldRenderer::render(easyMap);
-    // FieldRenderer::render(hardMap);
 
     return 0;
 }

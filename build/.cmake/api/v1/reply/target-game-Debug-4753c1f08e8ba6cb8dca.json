@@ -1,0 +1,182 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "game"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/upsik_/OOP/code/controller/../player"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/upsik_/OOP/code/events/../controller"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/upsik_/OOP/code/game/../controller"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/upsik_/OOP/code/map/../events"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/upsik_/OOP/code/map/..controller"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/upsik_/OOP/code/player/../controller"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "controller::@343ec11143e4af291df0"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "events::@e717dd2e91bd55c8cc62"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "map::@df5f17affa3d1c2693f6"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "game_class::@efba46d9fb97b7572c33"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "player::@56151017a5a923033aa1"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "reader::@dc185dcf7607965a3b61"
+		}
+	],
+	"id" : "game::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "code/controller/libcontroller.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "code/events/libevents.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "code/game/libgame_class.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "code/map/libmap.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "code/player/libplayer.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "code/reader/libreader.a",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "game",
+	"nameOnDisk" : "game",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "code/main.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

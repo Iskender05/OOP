@@ -2,17 +2,7 @@ cmake_minimum_required ( VERSION 3.5 )
 
 project ( game )
  
-include_directories ( head/ )
-set (SOURCE code/main.cpp
-            code/player.cpp
-            code/playerController.cpp 
-            code/tail.cpp
-            code/tailmap.cpp
-            code/positive_event.cpp
-            code/negative_event.cpp
-            code/move_event.cpp
-            code/game_level.cpp
-            code/level_generator.cpp
-            code/fieldRenderer.cpp)
+add_subdirectory ( ${PROJECT_SOURCE_DIR}/code )
 
-add_executable ( ${PROJECT_NAME} ${SOURCE} )
+add_executable ( ${PROJECT_NAME} code/main.cpp )
+target_link_libraries ( ${PROJECT_NAME} PRIVATE controller events game_class map player reader )

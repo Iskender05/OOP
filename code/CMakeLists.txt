@@ -1,0 +1,6 @@
+add_subdirectory ( ${PROJECT_SOURCE_DIR}/code/controller )
+add_subdirectory ( ${PROJECT_SOURCE_DIR}/code/events )
+add_subdirectory ( ${PROJECT_SOURCE_DIR}/code/map )
+add_subdirectory ( ${PROJECT_SOURCE_DIR}/code/game )
+add_subdirectory ( ${PROJECT_SOURCE_DIR}/code/player )
+add_subdirectory ( ${PROJECT_SOURCE_DIR}/code/reader )

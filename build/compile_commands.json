@@ -1,68 +1,104 @@
 [
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/main.cpp.o -c /home/upsik_/OOP/code/main.cpp",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/controller/../player -I/home/upsik_/OOP/code/events/../controller -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -I/home/upsik_/OOP/code/player/../controller -g -o CMakeFiles/game.dir/code/main.cpp.o -c /home/upsik_/OOP/code/main.cpp",
   "file": "/home/upsik_/OOP/code/main.cpp",
   "output": "CMakeFiles/game.dir/code/main.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/player.cpp.o -c /home/upsik_/OOP/code/player.cpp",
-  "file": "/home/upsik_/OOP/code/player.cpp",
-  "output": "CMakeFiles/game.dir/code/player.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/controller/../player -g -o code/controller/CMakeFiles/controller.dir/playerController.cpp.o -c /home/upsik_/OOP/code/controller/playerController.cpp",
+  "file": "/home/upsik_/OOP/code/controller/playerController.cpp",
+  "output": "code/controller/CMakeFiles/controller.dir/playerController.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/playerController.cpp.o -c /home/upsik_/OOP/code/playerController.cpp",
-  "file": "/home/upsik_/OOP/code/playerController.cpp",
-  "output": "CMakeFiles/game.dir/code/playerController.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/events/../controller -g -o code/events/CMakeFiles/events.dir/move_event.cpp.o -c /home/upsik_/OOP/code/events/move_event.cpp",
+  "file": "/home/upsik_/OOP/code/events/move_event.cpp",
+  "output": "code/events/CMakeFiles/events.dir/move_event.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/tail.cpp.o -c /home/upsik_/OOP/code/tail.cpp",
-  "file": "/home/upsik_/OOP/code/tail.cpp",
-  "output": "CMakeFiles/game.dir/code/tail.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/events/../controller -g -o code/events/CMakeFiles/events.dir/negative_event.cpp.o -c /home/upsik_/OOP/code/events/negative_event.cpp",
+  "file": "/home/upsik_/OOP/code/events/negative_event.cpp",
+  "output": "code/events/CMakeFiles/events.dir/negative_event.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/tailmap.cpp.o -c /home/upsik_/OOP/code/tailmap.cpp",
-  "file": "/home/upsik_/OOP/code/tailmap.cpp",
-  "output": "CMakeFiles/game.dir/code/tailmap.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/events/../controller -g -o code/events/CMakeFiles/events.dir/positive_event.cpp.o -c /home/upsik_/OOP/code/events/positive_event.cpp",
+  "file": "/home/upsik_/OOP/code/events/positive_event.cpp",
+  "output": "code/events/CMakeFiles/events.dir/positive_event.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/positive_event.cpp.o -c /home/upsik_/OOP/code/positive_event.cpp",
-  "file": "/home/upsik_/OOP/code/positive_event.cpp",
-  "output": "CMakeFiles/game.dir/code/positive_event.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -g -o code/map/CMakeFiles/map.dir/__/events/move_event.cpp.o -c /home/upsik_/OOP/code/events/move_event.cpp",
+  "file": "/home/upsik_/OOP/code/events/move_event.cpp",
+  "output": "code/map/CMakeFiles/map.dir/__/events/move_event.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/negative_event.cpp.o -c /home/upsik_/OOP/code/negative_event.cpp",
-  "file": "/home/upsik_/OOP/code/negative_event.cpp",
-  "output": "CMakeFiles/game.dir/code/negative_event.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -g -o code/map/CMakeFiles/map.dir/__/events/negative_event.cpp.o -c /home/upsik_/OOP/code/events/negative_event.cpp",
+  "file": "/home/upsik_/OOP/code/events/negative_event.cpp",
+  "output": "code/map/CMakeFiles/map.dir/__/events/negative_event.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/move_event.cpp.o -c /home/upsik_/OOP/code/move_event.cpp",
-  "file": "/home/upsik_/OOP/code/move_event.cpp",
-  "output": "CMakeFiles/game.dir/code/move_event.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -g -o code/map/CMakeFiles/map.dir/__/events/positive_event.cpp.o -c /home/upsik_/OOP/code/events/positive_event.cpp",
+  "file": "/home/upsik_/OOP/code/events/positive_event.cpp",
+  "output": "code/map/CMakeFiles/map.dir/__/events/positive_event.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/game_level.cpp.o -c /home/upsik_/OOP/code/game_level.cpp",
-  "file": "/home/upsik_/OOP/code/game_level.cpp",
-  "output": "CMakeFiles/game.dir/code/game_level.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -g -o code/map/CMakeFiles/map.dir/fieldRenderer.cpp.o -c /home/upsik_/OOP/code/map/fieldRenderer.cpp",
+  "file": "/home/upsik_/OOP/code/map/fieldRenderer.cpp",
+  "output": "code/map/CMakeFiles/map.dir/fieldRenderer.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/level_generator.cpp.o -c /home/upsik_/OOP/code/level_generator.cpp",
-  "file": "/home/upsik_/OOP/code/level_generator.cpp",
-  "output": "CMakeFiles/game.dir/code/level_generator.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -g -o code/map/CMakeFiles/map.dir/game_level.cpp.o -c /home/upsik_/OOP/code/map/game_level.cpp",
+  "file": "/home/upsik_/OOP/code/map/game_level.cpp",
+  "output": "code/map/CMakeFiles/map.dir/game_level.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/head -g -o CMakeFiles/game.dir/code/fieldRenderer.cpp.o -c /home/upsik_/OOP/code/fieldRenderer.cpp",
-  "file": "/home/upsik_/OOP/code/fieldRenderer.cpp",
-  "output": "CMakeFiles/game.dir/code/fieldRenderer.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -g -o code/map/CMakeFiles/map.dir/level_generator.cpp.o -c /home/upsik_/OOP/code/map/level_generator.cpp",
+  "file": "/home/upsik_/OOP/code/map/level_generator.cpp",
+  "output": "code/map/CMakeFiles/map.dir/level_generator.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -g -o code/map/CMakeFiles/map.dir/tail.cpp.o -c /home/upsik_/OOP/code/map/tail.cpp",
+  "file": "/home/upsik_/OOP/code/map/tail.cpp",
+  "output": "code/map/CMakeFiles/map.dir/tail.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -g -o code/map/CMakeFiles/map.dir/tailmap.cpp.o -c /home/upsik_/OOP/code/map/tailmap.cpp",
+  "file": "/home/upsik_/OOP/code/map/tailmap.cpp",
+  "output": "code/map/CMakeFiles/map.dir/tailmap.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -g -o code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o -c /home/upsik_/OOP/code/controller/playerController.cpp",
+  "file": "/home/upsik_/OOP/code/controller/playerController.cpp",
+  "output": "code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -g -o code/game/CMakeFiles/game_class.dir/game.cpp.o -c /home/upsik_/OOP/code/game/game.cpp",
+  "file": "/home/upsik_/OOP/code/game/game.cpp",
+  "output": "code/game/CMakeFiles/game_class.dir/game.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/player/../controller -g -o code/player/CMakeFiles/player.dir/player.cpp.o -c /home/upsik_/OOP/code/player/player.cpp",
+  "file": "/home/upsik_/OOP/code/player/player.cpp",
+  "output": "code/player/CMakeFiles/player.dir/player.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -g -o code/reader/CMakeFiles/reader.dir/inputhandler.cpp.o -c /home/upsik_/OOP/code/reader/inputhandler.cpp",
+  "file": "/home/upsik_/OOP/code/reader/inputhandler.cpp",
+  "output": "code/reader/CMakeFiles/reader.dir/inputhandler.cpp.o"
 }
 ]

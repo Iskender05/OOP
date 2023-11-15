@@ -1,0 +1,229 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "code",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"jsonFile" : "directory-code-Debug-aeb0861426feed400f1f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "code"
+				},
+				{
+					"build" : "code/controller",
+					"jsonFile" : "directory-code.controller-Debug-13da8d7dea6da9737efd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "code/controller",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "code/events",
+					"jsonFile" : "directory-code.events-Debug-c80fd44c14cffe4906d0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "code/events",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "code/map",
+					"jsonFile" : "directory-code.map-Debug-c91ea1aade292a1e1fdc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "code/map",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "code/game",
+					"jsonFile" : "directory-code.game-Debug-8e003c08df08b108b779.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "code/game",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "code/player",
+					"jsonFile" : "directory-code.player-Debug-d95a6cda8e996c8d7cb8.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "code/player",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "code/reader",
+					"jsonFile" : "directory-code.reader-Debug-f9d408c58fefbc905f2b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "code/reader",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					],
+					"name" : "game",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "controller::@343ec11143e4af291df0",
+					"jsonFile" : "target-controller-Debug-65058e352e5bc57634b6.json",
+					"name" : "controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "events::@e717dd2e91bd55c8cc62",
+					"jsonFile" : "target-events-Debug-ebf72d719045340c42da.json",
+					"name" : "events",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "game::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-game-Debug-4753c1f08e8ba6cb8dca.json",
+					"name" : "game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "game_class::@efba46d9fb97b7572c33",
+					"jsonFile" : "target-game_class-Debug-d7b5247a5b26f49e696d.json",
+					"name" : "game_class",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "map::@df5f17affa3d1c2693f6",
+					"jsonFile" : "target-map-Debug-a1c0ec9c75b621e9ec1b.json",
+					"name" : "map",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "player::@56151017a5a923033aa1",
+					"jsonFile" : "target-player-Debug-e060509a05706a2e46e1.json",
+					"name" : "player",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "reader::@dc185dcf7607965a3b61",
+					"jsonFile" : "target-reader-Debug-f1e2ac3a95c8f913dc91.json",
+					"name" : "reader",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/upsik_/OOP/build",
+		"source" : "/home/upsik_/OOP"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

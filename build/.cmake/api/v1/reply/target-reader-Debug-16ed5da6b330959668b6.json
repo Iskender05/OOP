@@ -42,7 +42,7 @@
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				2
+				1
 			]
 		}
 	],
@@ -60,15 +60,14 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				2
+				1
 			]
 		}
 	],
@@ -76,18 +75,13 @@
 	[
 		{
 			"backtrace" : 1,
-			"path" : "code/reader/inputhandler.h",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "code/reader/command_mapper.h",
+			"path" : "code/reader/input_reader.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "code/reader/inputhandler.cpp",
+			"path" : "code/reader/input_reader.cpp",
 			"sourceGroupIndex" : 1
 		}
 	],

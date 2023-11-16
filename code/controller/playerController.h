@@ -13,7 +13,8 @@ class PlayerController
 private:
     Player* player;
     Tailmap* map;
- 
+    
+    
     const int move_value = 1;
     const int health_value = 1;
 
@@ -24,11 +25,11 @@ public:
     void dinamic_health();
     void dinamic_lvl(int lvl_value);
 
-    Player* get_player ( void );
+    Player* get_player(void);
 
     void checkAndApplyEvent();
+
+   
 };
 
-
 #endif
-

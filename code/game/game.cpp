@@ -30,14 +30,12 @@ void Game::ChooseLevel()
         case 1:
         {
             PlayerController playerController(&player, &easyMap);
-            FieldRenderer::render(easyMap, playerController);
             PlayGame(easyMap, playerController);
             break;
         }
         case 2:
         {
             PlayerController playerController(&player, &hardMap);
-            FieldRenderer::render(hardMap, playerController);
             PlayGame(hardMap, playerController);
             break;
         }
@@ -56,84 +54,58 @@ void Game::executeCommand(const std::string& command) {
 
 void Game::PlayGame(Tailmap &map, PlayerController &pc)
 {
-    bool run = true;
     uint64_t line_size = 0;
-    while ( run )
+    while ( running )
     {
-        CheckLose (*pc.get_player());
-        CheckWin (*pc.get_player(), map);
-
-        char key = getchar ();
-        line_size++;
-
-        if ( line_size > 1 && key != '\n' )
-            continue;
-
-        if ( key == '\n' ){
-            line_size = 0;
-            continue;
-        }
-
-        if ( key == 'q' )
-            run = false;
-
-        FieldRenderer::clear_screen();
-
-        switch ( key )
-        {
-        case 'w':
-            pc.move(Direction::W_key);
-            break;
-        
-        case 'a':
-            pc.move(Direction::A_key);
-            break;
-
-        case 'd':
-            pc.move(Direction::D_key);
-            break;
-
-        case 's':
-            pc.move(Direction::S_key);
-            break;
-        }
+        CheckLose (*pc.get_player(), pc);
+        CheckWin (*pc.get_player(), map, pc);
 
         FieldRenderer::render(map, pc);
+
+        uint8_t ret = reader.readInput ( &pc ); 
+        if ( ret == 1 )
+            StartGame ();
+        
+        if ( ret == 2 )
+            EndGame ( pc );
+
+        FieldRenderer::clear_screen();
     }
 }
 
 
-void Game::EndGame()
+void Game::EndGame(PlayerController &pc)
 {
+    running = false;
+
     std::cout << "Game over. Thank you for playing!" << std::endl;
 
     char choice;
     std::cout << "Would you like to play again? (Y/N): ";
     std::cin >> choice;
-    if (choice == 'Y' || choice == 'y') {
-        StartGame(); // Начать новую игру
-    } else {
-        std::cout << "Goodbye!" << std::endl;
+    
+    reader.readInput ( &pc );
 
-        exit(0); 
-    }
+    std::cout << "Goodbye!" << std::endl;
+
+    exit(0);
 }
 
-void Game::CheckLose(Player &player)
+void Game::CheckLose(Player &player, PlayerController &pc)
 {
     if (player.getHP().hp <= 0) 
     {
         std::cout << "You have been defeated! Game over." << std::endl;
-        EndGame();
+        EndGame(pc);
     }
 }
 
 
-void Game::CheckWin(Player &player, Tailmap& map)    // Понять !!!!!!
+void Game::CheckWin(Player &player, Tailmap& map, PlayerController &pc)    // Понять !!!!!!
 {
     if ( player.getPostion() == map.get_EndGame() )
     {
         std::cout << "You WIN! Game over." << std::endl;
-        EndGame();
+        EndGame(pc);
     }
 }

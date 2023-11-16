@@ -61,6 +61,10 @@
 				},
 				{
 					"backtrace" : 2,
+					"path" : "/home/upsik_/OOP/code/game/../reader"
+				},
+				{
+					"backtrace" : 2,
 					"path" : "/home/upsik_/OOP/code/map/../events"
 				},
 				{

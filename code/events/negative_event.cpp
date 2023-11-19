@@ -2,7 +2,7 @@
 #include <iostream>
 
 void NegativeEvent::applyEvent(PlayerController& pc, Tail& tail) {
-    std::cout << "Negative event active!" << std::endl;
+    //std::cout << "Negative event active!" << std::endl;
     
 
     //  уменьшение здоровья и уровня игрока
@@ -17,6 +17,6 @@ void NegativeEvent::applyEvent(PlayerController& pc, Tail& tail) {
     pc.get_player()->setLvl(currentLevel - 1);
 
     // Вывод текущего здоровья игрока
-    std::cout << "Current HP: " << (int)pc.get_player()->getHP().hp << std::endl;
+    //std::cout << "Current HP: " << (int)pc.get_player()->getHP().hp << std::endl;
 }
  

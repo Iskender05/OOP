@@ -11,6 +11,7 @@
 class PlayerController;
 class FieldRenderer;
 class GameLevel;
+class InputReader;
 
 class Game {
 public:
@@ -24,8 +25,8 @@ public:
     void ChooseLevel();
     void PlayGame(Tailmap& map, PlayerController& pc);
     void EndGame(PlayerController &pc);
-    void CheckLose(Player& Player, PlayerController &pc);
-    void CheckWin(Player& player, Tailmap& map, PlayerController &pc);
+    void CheckLose(PlayerController &pc);
+    void CheckWin(Tailmap& map, PlayerController &pc);
 
 };
 

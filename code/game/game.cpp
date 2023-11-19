@@ -4,12 +4,15 @@
 
 void Game::StartGame()
 {
+    running = true;
+
     std::cout << "Welcome to the game!" << std::endl;
-    std::cout << "choose your level:"   << std::endl;
+    std::cout << "Choose your level:"   << std::endl;
     std::cout << "1. Easy"              << std::endl;
     std::cout << "2. Hard"              << std::endl;
 
-    ChooseLevel ();
+
+    ChooseLevel();
 }
 
 void Game::ChooseLevel()
@@ -55,21 +58,28 @@ void Game::executeCommand(const std::string& command) {
 void Game::PlayGame(Tailmap &map, PlayerController &pc)
 {
     uint64_t line_size = 0;
+    FieldRenderer::render(map, pc);
     while ( running )
     {
-        CheckLose (*pc.get_player(), pc);
-        CheckWin (*pc.get_player(), map, pc);
+        CheckLose (pc);
+        CheckWin (map, pc);
 
-        FieldRenderer::render(map, pc);
-
-        uint8_t ret = reader.readInput ( &pc ); 
-        if ( ret == 1 )
-            StartGame ();
-        
+        uint8_t ret = reader.readInput ( &pc );        
         if ( ret == 2 )
             EndGame ( pc );
 
         FieldRenderer::clear_screen();
+        FieldRenderer::render(map, pc);
+    }
+
+    std::cout << "Would you like to play again? (Y/N): ";
+    char choice = reader.readInput ( &pc );
+
+    if ( choice ) {
+        // Перезапустить игру
+        StartGame();
+    } else {
+        std::cout << "Goodbye!" << std::endl;
     }
 }
 
@@ -79,21 +89,12 @@ void Game::EndGame(PlayerController &pc)
     running = false;
 
     std::cout << "Game over. Thank you for playing!" << std::endl;
-
-    char choice;
-    std::cout << "Would you like to play again? (Y/N): ";
-    std::cin >> choice;
-    
-    reader.readInput ( &pc );
-
-    std::cout << "Goodbye!" << std::endl;
-
-    exit(0);
 }
 
-void Game::CheckLose(Player &player, PlayerController &pc)
+
+void Game::CheckLose(PlayerController &pc)
 {
-    if (player.getHP().hp <= 0) 
+    if (pc.get_player()->getHP().hp <= 0) 
     {
         std::cout << "You have been defeated! Game over." << std::endl;
         EndGame(pc);
@@ -101,9 +102,9 @@ void Game::CheckLose(Player &player, PlayerController &pc)
 }
 
 
-void Game::CheckWin(Player &player, Tailmap& map, PlayerController &pc)    // Понять !!!!!!
+void Game::CheckWin(Tailmap& map, PlayerController &pc) // Понять !!!!!!
 {
-    if ( player.getPostion() == map.get_EndGame() )
+    if ( pc.get_player()->getPostion() == map.get_EndGame() )
     {
         std::cout << "You WIN! Game over." << std::endl;
         EndGame(pc);

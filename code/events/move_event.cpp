@@ -6,7 +6,7 @@
 void MoveEvent::applyEvent(PlayerController& pc, Tail& tail) {
     // Пример изменения координат игрока на поле: случайное перемещение
     
-    std::cout << "MoveEvent active!" << std::endl;
+    //std::cout << "MoveEvent active!" << std::endl;
 
     pos_t currentPosition = pc.get_player()->getPostion();
     int newX = currentPosition.x + (rand() % 3) - 1; // Случайное смещение по X (-1, 0, 1)

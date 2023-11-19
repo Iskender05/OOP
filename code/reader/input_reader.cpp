@@ -31,10 +31,17 @@ InputReader::InputReader(const std::string& controlFile) {
     loadControls(controlFile);
 }
 
-// Считывание команды с клавиатуры
-uint8_t InputReader::readInput(PlayerController *playerController) {
+char InputReader::in(void) const
+{
     char input;
     std::cin >> input;
+
+    return input;
+}
+
+// Считывание команды с клавиатуры
+uint8_t InputReader::readInput(PlayerController *playerController) {
+    char input = in();
 
     auto it = controlMap_.find(input);
     if (it != controlMap_.end()) {

@@ -18,7 +18,14 @@ enum class Action : uint8_t
     startGame, 
     endGame
 };
-class InputReader 
+
+class Input
+{
+    public:
+        virtual char in ( void ) const = 0;
+};
+
+class InputReader : public Input 
 {
 public:
     InputReader(const std::string& controlFile = "config.txt");
@@ -26,6 +33,7 @@ public:
 
     ControlMap controlMap_;
 
+    char in ( void ) const override;
     uint8_t readInput( PlayerController *playerController);
 private:
 

@@ -4,3 +4,4 @@ d moveRight
 s moveDown
 Y startGame
 q quit
+  

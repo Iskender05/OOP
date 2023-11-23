@@ -7,8 +7,8 @@
 #include "../map/game_level.h"
 #include "../map/level_generator.h"
 #include "../reader/input_reader.h"
-#include "game_observer.h"
-#include "observer.h"
+#include "../map/console_render.h"
+#include "tracker.h"
 
 class PlayerController;
 class FieldRenderer;
@@ -19,20 +19,17 @@ class Game {
 public:
     bool running = true;
     InputReader reader{"config.txt"};
-    std::vector<GameObserver*> gameObservers;
-
     Game () = default;
 
     void executeCommand(const std::string& command);
     void StartGame();
-    void ChooseLevel();
-    void PlayGame(Tailmap& map, PlayerController& pc);
+    void ChooseLevel(GameRender& render);
+    void PlayGame(Tailmap& map, PlayerController& pc, Trakcer &htrack);
     void EndGame(PlayerController &pc);
-    void CheckLose(PlayerController &pc);
-    void CheckWin(Tailmap& map, PlayerController &pc);
+    void CheckLose(PlayerController &pc, Trakcer &htrack);
+    void CheckWin(Tailmap& map, PlayerController &pc, Trakcer &htrack);
+    
 
-    void registerGameObserver(GameObserver* observer);
-    void notifyGameObservers(const std::string& eventMessage);
 };
 
 #endif

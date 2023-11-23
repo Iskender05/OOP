@@ -4,6 +4,7 @@
         "iostream": "cpp",
         "cstdlib": "cpp",
         "functional": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "string": "cpp"
     }
 }

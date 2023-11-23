@@ -38,7 +38,7 @@ typedef struct __Position
     void set_pos ( int64_t x, int64_t y ) { this->x = x; this->y = y; }
 } pos_t;
 
-class Player
+class Player      
 {
     friend class PlayerController;
  

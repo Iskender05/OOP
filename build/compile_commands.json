@@ -49,6 +49,12 @@
 },
 {
   "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -g -o code/map/CMakeFiles/map.dir/console_render.cpp.o -c /home/upsik_/OOP/code/map/console_render.cpp",
+  "file": "/home/upsik_/OOP/code/map/console_render.cpp",
+  "output": "code/map/CMakeFiles/map.dir/console_render.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
   "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -g -o code/map/CMakeFiles/map.dir/fieldRenderer.cpp.o -c /home/upsik_/OOP/code/map/fieldRenderer.cpp",
   "file": "/home/upsik_/OOP/code/map/fieldRenderer.cpp",
   "output": "code/map/CMakeFiles/map.dir/fieldRenderer.cpp.o"
@@ -91,9 +97,9 @@
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -g -o code/game/CMakeFiles/game_class.dir/game_observer.cpp.o -c /home/upsik_/OOP/code/game/game_observer.cpp",
-  "file": "/home/upsik_/OOP/code/game/game_observer.cpp",
-  "output": "code/game/CMakeFiles/game_class.dir/game_observer.cpp.o"
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -g -o code/game/CMakeFiles/game_class.dir/tracker.cpp.o -c /home/upsik_/OOP/code/game/tracker.cpp",
+  "file": "/home/upsik_/OOP/code/game/tracker.cpp",
+  "output": "code/game/CMakeFiles/game_class.dir/tracker.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",

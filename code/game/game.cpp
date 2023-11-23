@@ -5,17 +5,14 @@
 void Game::StartGame()
 {
     running = true;
+    ConsoleRender render;
 
-    std::cout << "Welcome to the game!" << std::endl;
-    std::cout << "Choose your level:"   << std::endl;
-    std::cout << "1. Easy"              << std::endl;
-    std::cout << "2. Hard"              << std::endl;
+    render.greeting ();
 
-
-    ChooseLevel();
+    ChooseLevel( render );
 }
 
-void Game::ChooseLevel()
+void Game::ChooseLevel( GameRender& render )
 {
     int choise;
     std::cin >> choise;
@@ -33,13 +30,15 @@ void Game::ChooseLevel()
         case 1:
         {
             PlayerController playerController(&player, &easyMap);
-            PlayGame(easyMap, playerController);
+            Trakcer htrack { render, playerController, easyMap };
+            PlayGame(easyMap, playerController, htrack);
             break;
         }
         case 2:
         {
             PlayerController playerController(&player, &hardMap);
-            PlayGame(hardMap, playerController);
+            Trakcer htrack { render, playerController, hardMap };
+            PlayGame(hardMap, playerController, htrack);
             break;
         }
         default:
@@ -50,45 +49,33 @@ void Game::ChooseLevel()
     }
 }
 
-
 void Game::executeCommand(const std::string& command) {
     std::cout << "Executing command: " << command << std::endl;
 }
 
-void Game::PlayGame(Tailmap &map, PlayerController &pc)
+void Game::PlayGame(Tailmap &map, PlayerController &pc, Trakcer &htrack)
 {
-    uint64_t line_size = 0;
-    FieldRenderer::render(map, pc);
     while ( running )
     {
-        CheckLose (pc);
-        CheckWin (map, pc);
+        CheckLose (pc, htrack);
+        CheckWin (map, pc, htrack);
 
-        //отображениие
-        //передача поля и контроллера
-        //туду же и сообщение об изменениях
-        //при событии перемещения в контроллеле создать поле и записывать в него последнее сообщение
-        FieldRenderer::clear_screen();
-        FieldRenderer::render(map, pc);
+        if ( !running )
+            break;
+
+        htrack.observer ( Types::PLAY );
         uint8_t ret = reader.readInput ( &pc );        
         if ( ret == 2 )
             EndGame ( pc );
-
-        // Оповещение наблюдателей об изменениях в игре
-        //notifyGameObservers("Game updated");
-
-        //FieldRenderer::clear_screen();
-        //FieldRenderer::render(map, pc);
     }
 
-    std::cout << "Would you like to play again? (Y/N): ";
+    htrack.observer ( Types::OFFER );
     char choice = reader.readInput ( &pc );
 
     if ( choice ) {
-        // Перезапустить игру
         StartGame();
     } else {
-        std::cout << "Goodbye!" << std::endl;
+        htrack.observer ( Types::BYE );
     }
 }
 
@@ -96,37 +83,26 @@ void Game::PlayGame(Tailmap &map, PlayerController &pc)
 void Game::EndGame(PlayerController &pc)
 {
     running = false;
-        // Оповещение наблюдателей об окончании игры
-    //notifyGameObservers("Game over.");
 
-    std::cout << "Game over. Thank you for playing!\n Press any key" << std::endl;
+    std::cout << "Thank you for playing!\n Press any key" << std::endl;
 }
 
 
-void Game::CheckLose(PlayerController &pc)
+void Game::CheckLose(PlayerController &pc, Trakcer &htrack)
 {
     if (pc.get_player()->getHP().hp <= 0) 
     {
-        std::cout << "You have been defeated! Game over." << std::endl;
+        htrack.observer ( Types::CHECK_LOSE );
         EndGame(pc);
     }
 }
 
 
-void Game::CheckWin(Tailmap& map, PlayerController &pc) // Понять !!!!!!
+void Game::CheckWin(Tailmap& map, PlayerController &pc, Trakcer &htrack) 
 {
     if ( pc.get_player()->getPostion() == map.get_EndGame() )
-    
+    {
+        htrack.observer ( Types::CHECK_WIN );
         EndGame(pc);
     }
-
-
-// void Game::registerGameObserver(GameObserver* observer) {
-//     gameObservers.push_back(observer);
-// }
-
-// void Game::notifyGameObservers(const std::string& eventMessage) {
-//     for (auto observer : gameObservers) {
-//         observer->onEventTriggered(eventMessage);
-//     }
-// }
+}

@@ -187,14 +187,14 @@
 				{
 					"directoryIndex" : 5,
 					"id" : "game_class::@efba46d9fb97b7572c33",
-					"jsonFile" : "target-game_class-Debug-e9168c8bcf9f55e92a3d.json",
+					"jsonFile" : "target-game_class-Debug-7ce9cea969b7be939e3d.json",
 					"name" : "game_class",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "map::@df5f17affa3d1c2693f6",
-					"jsonFile" : "target-map-Debug-a1c0ec9c75b621e9ec1b.json",
+					"jsonFile" : "target-map-Debug-26c64734775469891812.json",
 					"name" : "map",
 					"projectIndex" : 0
 				},

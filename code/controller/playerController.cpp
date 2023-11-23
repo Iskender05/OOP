@@ -106,5 +106,4 @@ std::string PlayerController::get_currentMessege()
 void PlayerController::set_currentMesseege(std::string newString)
 {
     currentMessage = newString;
-
 }

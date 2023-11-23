@@ -4,9 +4,9 @@ add_library ( game_class
         ../controller/playerController.cpp
         ../reader/input_reader.cpp
         ../reader/input_reader.h
-        observer.h
-        game_observer.h
-        game_observer.cpp
+        tracker.h
+        tracker.cpp
+        types.h
         game.h
         game.cpp
 )

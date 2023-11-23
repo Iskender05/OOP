@@ -3,14 +3,12 @@
 
 #include "tailmap.h" 
 
-class FieldRenderer
+
+class FieldRenderer 
 {
 public:
-    static void render(Tailmap& map, PlayerController& pc);
-    static void clear_screen();
+    static void render(Tailmap& map, PlayerController& pc) ;
+    static void clear_screen() ;
 };
-
-
-
 
 #endif

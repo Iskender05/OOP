@@ -297,6 +297,13 @@ build code/map/CMakeFiles/map.dir/__/events/positive_event.cpp.o: CXX_COMPILER__
   OBJECT_DIR = code/map/CMakeFiles/map.dir
   OBJECT_FILE_DIR = code/map/CMakeFiles/map.dir/__/events
 
+build code/map/CMakeFiles/map.dir/console_render.cpp.o: CXX_COMPILER__map_unscanned_Debug /home/upsik_/OOP/code/map/console_render.cpp || cmake_object_order_depends_target_map
+  DEP_FILE = code/map/CMakeFiles/map.dir/console_render.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller
+  OBJECT_DIR = code/map/CMakeFiles/map.dir
+  OBJECT_FILE_DIR = code/map/CMakeFiles/map.dir
+
 build code/map/CMakeFiles/map.dir/fieldRenderer.cpp.o: CXX_COMPILER__map_unscanned_Debug /home/upsik_/OOP/code/map/fieldRenderer.cpp || cmake_object_order_depends_target_map
   DEP_FILE = code/map/CMakeFiles/map.dir/fieldRenderer.cpp.o.d
   FLAGS = -g
@@ -340,7 +347,7 @@ build code/map/CMakeFiles/map.dir/tailmap.cpp.o: CXX_COMPILER__map_unscanned_Deb
 #############################################
 # Link the static library code/map/libmap.a
 
-build code/map/libmap.a: CXX_STATIC_LIBRARY_LINKER__map_Debug code/map/CMakeFiles/map.dir/__/events/move_event.cpp.o code/map/CMakeFiles/map.dir/__/events/negative_event.cpp.o code/map/CMakeFiles/map.dir/__/events/positive_event.cpp.o code/map/CMakeFiles/map.dir/fieldRenderer.cpp.o code/map/CMakeFiles/map.dir/game_level.cpp.o code/map/CMakeFiles/map.dir/level_generator.cpp.o code/map/CMakeFiles/map.dir/tail.cpp.o code/map/CMakeFiles/map.dir/tailmap.cpp.o
+build code/map/libmap.a: CXX_STATIC_LIBRARY_LINKER__map_Debug code/map/CMakeFiles/map.dir/__/events/move_event.cpp.o code/map/CMakeFiles/map.dir/__/events/negative_event.cpp.o code/map/CMakeFiles/map.dir/__/events/positive_event.cpp.o code/map/CMakeFiles/map.dir/console_render.cpp.o code/map/CMakeFiles/map.dir/fieldRenderer.cpp.o code/map/CMakeFiles/map.dir/game_level.cpp.o code/map/CMakeFiles/map.dir/level_generator.cpp.o code/map/CMakeFiles/map.dir/tail.cpp.o code/map/CMakeFiles/map.dir/tailmap.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = code/map/CMakeFiles/map.dir
   POST_BUILD = :
@@ -400,8 +407,8 @@ build code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o: CXX_COMP
   OBJECT_DIR = code/game/CMakeFiles/game_class.dir
   OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir/__/reader
 
-build code/game/CMakeFiles/game_class.dir/game_observer.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/game/game_observer.cpp || cmake_object_order_depends_target_game_class
-  DEP_FILE = code/game/CMakeFiles/game_class.dir/game_observer.cpp.o.d
+build code/game/CMakeFiles/game_class.dir/tracker.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/game/tracker.cpp || cmake_object_order_depends_target_game_class
+  DEP_FILE = code/game/CMakeFiles/game_class.dir/tracker.cpp.o.d
   FLAGS = -g
   INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader
   OBJECT_DIR = code/game/CMakeFiles/game_class.dir
@@ -422,7 +429,7 @@ build code/game/CMakeFiles/game_class.dir/game.cpp.o: CXX_COMPILER__game_class_u
 #############################################
 # Link the static library code/game/libgame_class.a
 
-build code/game/libgame_class.a: CXX_STATIC_LIBRARY_LINKER__game_class_Debug code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o code/game/CMakeFiles/game_class.dir/game_observer.cpp.o code/game/CMakeFiles/game_class.dir/game.cpp.o
+build code/game/libgame_class.a: CXX_STATIC_LIBRARY_LINKER__game_class_Debug code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o code/game/CMakeFiles/game_class.dir/tracker.cpp.o code/game/CMakeFiles/game_class.dir/game.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = code/game/CMakeFiles/game_class.dir
   POST_BUILD = :

@@ -6,6 +6,9 @@ add_library ( map
         ../events/move_event.cpp
         ../events/negative_event.cpp
         ../events/positive_event.cpp
+        console_render.cpp
+        console_render.h
+        game_render.h
         fieldRenderer.h
         game_level.h
         level_generator.h

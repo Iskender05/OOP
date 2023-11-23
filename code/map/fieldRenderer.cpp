@@ -49,10 +49,6 @@ void FieldRenderer::render(Tailmap& map, PlayerController& pc)
         std::cout << std::endl;
     }
 
-    //узнать текущие координаты игрока
-    //по этим координатам получить текущую клетку, на которой стоит игрок
-    //у этой клетки проверить, является ли она пустой
-    //если да, то в контроллер записываем пустую строку
     if ( map.getTail(pc.get_player()->getPostion()).get_type() == TailType::NORM){
         pc.set_currentMesseege("");
     }
@@ -99,3 +95,4 @@ void FieldRenderer::clear_screen()
 {
     system ( "clear" );
 }
+

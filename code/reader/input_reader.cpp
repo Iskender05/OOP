@@ -3,30 +3,53 @@
 void InputReader::loadControls(const std::string& controlFile) {
     std::ifstream file(controlFile);
     if (!file.is_open()) {
-        std::cerr << "Failed to open control file" << std::endl;
+        std::cerr << "Не удалось открыть файл управления" << std::endl;
         return;
     }
 
     char key;
     std::string command;
 
+    std::unordered_map<std::string, Action> commandMap = {
+        {"moveUp", Action::moveUp},
+        {"moveDown", Action::moveDown},
+        {"moveLeft", Action::moveLeft},
+        {"moveRight", Action::moveRight},
+        {"startGame", Action::startGame},
+        {"quit", Action::endGame}
+    };
+
+    std::unordered_map<char, bool> keyAssigned;
+
     while (file >> key >> command) {
-        if (command == "moveUp")
-            controlMap_[key] = Action::moveUp;
-        if (command == "moveDown")
-            controlMap_[key] = Action::moveDown;
-        if (command == "moveLeft")
-            controlMap_[key] = Action::moveLeft;
-        if (command == "moveRight")
-            controlMap_[key] = Action::moveRight;
-        if (command == "startGame")
-            controlMap_[key] = Action::startGame;
-        if (command == "quit")
-            controlMap_[key] = Action::endGame;
+        // Проверка на валидность клавиши
+        if (!isalpha(key)) {
+            std::cerr << "Недопустимая клавиша: " << key << std::endl;
+            continue;
+        }
+
+        // Проверка на валидность команды
+        auto commandIt = commandMap.find(command);
+        if (commandIt == commandMap.end()) {
+            std::cerr << "Недопустимая команда: " << command << std::endl;
+            continue;
+        }
+
+        // Проверка на дублирование присвоений клавиш
+        if (keyAssigned[key]) {
+            std::cerr << "Дублирование присвоения клавиши: " << key << std::endl;
+            continue;
+        }
+
+        controlMap_[key] = commandIt->second;
+        keyAssigned[key] = true;
     }
 
     file.close();
 }
+
+
+
 InputReader::InputReader(const std::string& controlFile) {
     loadControls(controlFile);
 }

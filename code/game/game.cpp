@@ -64,12 +64,21 @@ void Game::PlayGame(Tailmap &map, PlayerController &pc)
         CheckLose (pc);
         CheckWin (map, pc);
 
+        //отображениие
+        //передача поля и контроллера
+        //туду же и сообщение об изменениях
+        //при событии перемещения в контроллеле создать поле и записывать в него последнее сообщение
+        FieldRenderer::clear_screen();
+        FieldRenderer::render(map, pc);
         uint8_t ret = reader.readInput ( &pc );        
         if ( ret == 2 )
             EndGame ( pc );
 
-        FieldRenderer::clear_screen();
-        FieldRenderer::render(map, pc);
+        // Оповещение наблюдателей об изменениях в игре
+        //notifyGameObservers("Game updated");
+
+        //FieldRenderer::clear_screen();
+        //FieldRenderer::render(map, pc);
     }
 
     std::cout << "Would you like to play again? (Y/N): ";
@@ -87,8 +96,10 @@ void Game::PlayGame(Tailmap &map, PlayerController &pc)
 void Game::EndGame(PlayerController &pc)
 {
     running = false;
+        // Оповещение наблюдателей об окончании игры
+    //notifyGameObservers("Game over.");
 
-    std::cout << "Game over. Thank you for playing!" << std::endl;
+    std::cout << "Game over. Thank you for playing!\n Press any key" << std::endl;
 }
 
 
@@ -105,8 +116,17 @@ void Game::CheckLose(PlayerController &pc)
 void Game::CheckWin(Tailmap& map, PlayerController &pc) // Понять !!!!!!
 {
     if ( pc.get_player()->getPostion() == map.get_EndGame() )
-    {
-        std::cout << "You WIN! Game over." << std::endl;
+    
         EndGame(pc);
     }
-}
+
+
+// void Game::registerGameObserver(GameObserver* observer) {
+//     gameObservers.push_back(observer);
+// }
+
+// void Game::notifyGameObservers(const std::string& eventMessage) {
+//     for (auto observer : gameObservers) {
+//         observer->onEventTriggered(eventMessage);
+//     }
+// }

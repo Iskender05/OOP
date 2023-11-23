@@ -5,6 +5,7 @@
 #include "directions.h"
 #include "../map/tailmap.h"
 #include "../events/game_event.h"
+#include <string>
 
 class Tailmap;
 
@@ -13,7 +14,8 @@ class PlayerController
 private:
     Player* player;
     Tailmap* map;
-    
+
+    std::string currentMessage = "level Started"; 
     
     const int move_value = 1;
     const int health_value = 1;
@@ -28,6 +30,11 @@ public:
     Player* get_player(void);
 
     void checkAndApplyEvent();
+
+    std::string get_currentMessege();
+    void set_currentMesseege(std::string newString);
+
+    
 
    
 };

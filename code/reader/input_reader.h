@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include "../controller/playerController.h"
 #include <functional>
+#include "input.h"
 
 class Game;
 
@@ -19,11 +20,6 @@ enum class Action : uint8_t
     endGame
 };
 
-class Input
-{
-    public:
-        virtual char in ( void ) const = 0;
-};
 
 class InputReader : public Input 
 {

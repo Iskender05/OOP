@@ -42,7 +42,7 @@
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				1
+				2
 			]
 		}
 	],
@@ -60,19 +60,25 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				1
+				2
 			]
 		}
 	],
 	"sources" : 
 	[
+		{
+			"backtrace" : 1,
+			"path" : "code/reader/input.h",
+			"sourceGroupIndex" : 0
+		},
 		{
 			"backtrace" : 1,
 			"path" : "code/reader/input_reader.h",

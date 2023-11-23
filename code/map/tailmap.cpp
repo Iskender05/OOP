@@ -168,3 +168,8 @@ Tail& Tailmap::at ( pos_t position )
 {
     return at ( position.x, position.y );
 }
+
+Tail Tailmap::getTail(pos_t position)
+{
+    return map[position.y][position.x];
+}

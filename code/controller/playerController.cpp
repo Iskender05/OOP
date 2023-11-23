@@ -97,3 +97,14 @@ void PlayerController::dinamic_health() {
 void PlayerController::dinamic_lvl(int lvl_value){
     player->setLvl(player->getLvl() + lvl_value);
 }
+
+std::string PlayerController::get_currentMessege()
+{
+    return currentMessage;
+}
+
+void PlayerController::set_currentMesseege(std::string newString)
+{
+    currentMessage = newString;
+
+}

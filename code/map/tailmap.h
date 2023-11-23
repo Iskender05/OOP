@@ -13,6 +13,7 @@
 #define MAX_HEIGHT 65535
 
 class Tail;
+class Player;
 
 class Tailmap
 {
@@ -32,6 +33,8 @@ private:
 public:
     uint16_t get_Width();
     uint16_t get_Height();
+
+    Tail getTail(pos_t position);
 
     pos_t get_Spawn();
     pos_t get_EndGame();

@@ -400,6 +400,13 @@ build code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o: CXX_COMP
   OBJECT_DIR = code/game/CMakeFiles/game_class.dir
   OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir/__/reader
 
+build code/game/CMakeFiles/game_class.dir/game_observer.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/game/game_observer.cpp || cmake_object_order_depends_target_game_class
+  DEP_FILE = code/game/CMakeFiles/game_class.dir/game_observer.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader
+  OBJECT_DIR = code/game/CMakeFiles/game_class.dir
+  OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir
+
 build code/game/CMakeFiles/game_class.dir/game.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/game/game.cpp || cmake_object_order_depends_target_game_class
   DEP_FILE = code/game/CMakeFiles/game_class.dir/game.cpp.o.d
   FLAGS = -g
@@ -415,7 +422,7 @@ build code/game/CMakeFiles/game_class.dir/game.cpp.o: CXX_COMPILER__game_class_u
 #############################################
 # Link the static library code/game/libgame_class.a
 
-build code/game/libgame_class.a: CXX_STATIC_LIBRARY_LINKER__game_class_Debug code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o code/game/CMakeFiles/game_class.dir/game.cpp.o
+build code/game/libgame_class.a: CXX_STATIC_LIBRARY_LINKER__game_class_Debug code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o code/game/CMakeFiles/game_class.dir/game_observer.cpp.o code/game/CMakeFiles/game_class.dir/game.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = code/game/CMakeFiles/game_class.dir
   POST_BUILD = :

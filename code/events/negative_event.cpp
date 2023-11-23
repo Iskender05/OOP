@@ -3,13 +3,14 @@
 
 void NegativeEvent::applyEvent(PlayerController& pc, Tail& tail) {
     //std::cout << "Negative event active!" << std::endl;
-    
+    std::string eventMassege = "Negative event active!" ;
+    pc.set_currentMesseege(eventMassege);
 
     //  уменьшение здоровья и уровня игрока
     helth_t currentHP = pc.get_player()->getHP();
     pc.get_player()->setHP(currentHP.hp - 10, currentHP.damage);            // Добавить проерку на проигрыш
     if (currentHP.hp == 0){
-        std::cout << "YOU LOSE :()" << std::endl;
+        //std::cout << "YOU LOSE :()" << std::endl;
     }
 
 

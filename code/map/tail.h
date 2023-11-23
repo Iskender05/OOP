@@ -17,7 +17,7 @@ private:
 public:
     // Tail () : type ( TailType::NORM ) {};
     Tail( TailType type = TailType::NORM, GameEvent* event = nullptr );
-    ~Tail() = default;
+    ~Tail() = default;           //Подумать
 
     void operator = ( const TailType type );
     void operator = ( GameEvent* event );

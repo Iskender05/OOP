@@ -3,6 +3,7 @@
         "cstdint": "cpp",
         "iostream": "cpp",
         "cstdlib": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "ostream": "cpp"
     }
 }

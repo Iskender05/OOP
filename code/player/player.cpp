@@ -39,7 +39,6 @@ void Player::takeDamage(int amount){
         hitpoint.hp -= amount;
         if(hitpoint.hp < MIN_HEALTH){
             hitpoint.hp  = MIN_HEALTH;
-            puts(" YOU DIED :( ");
         }
     }
 }

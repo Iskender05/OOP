@@ -91,6 +91,12 @@
 },
 {
   "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -g -o code/game/CMakeFiles/game_class.dir/game_observer.cpp.o -c /home/upsik_/OOP/code/game/game_observer.cpp",
+  "file": "/home/upsik_/OOP/code/game/game_observer.cpp",
+  "output": "code/game/CMakeFiles/game_class.dir/game_observer.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
   "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -g -o code/game/CMakeFiles/game_class.dir/game.cpp.o -c /home/upsik_/OOP/code/game/game.cpp",
   "file": "/home/upsik_/OOP/code/game/game.cpp",
   "output": "code/game/CMakeFiles/game_class.dir/game.cpp.o"

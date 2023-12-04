@@ -31,7 +31,8 @@
 						4,
 						5,
 						6,
-						7
+						7,
+						8
 					],
 					"jsonFile" : "directory-code-Debug-aeb0861426feed400f1f.json",
 					"minimumCMakeVersion" : 
@@ -84,7 +85,7 @@
 					"source" : "code/map",
 					"targetIndexes" : 
 					[
-						4
+						5
 					]
 				},
 				{
@@ -114,7 +115,7 @@
 					"source" : "code/player",
 					"targetIndexes" : 
 					[
-						5
+						6
 					]
 				},
 				{
@@ -129,7 +130,22 @@
 					"source" : "code/reader",
 					"targetIndexes" : 
 					[
-						6
+						7
+					]
+				},
+				{
+					"build" : "code/logger",
+					"jsonFile" : "directory-code.logger-Debug-968982cc1827759a5002.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "code/logger",
+					"targetIndexes" : 
+					[
+						4
 					]
 				}
 			],
@@ -146,7 +162,8 @@
 						4,
 						5,
 						6,
-						7
+						7,
+						8
 					],
 					"name" : "game",
 					"targetIndexes" : 
@@ -157,7 +174,8 @@
 						3,
 						4,
 						5,
-						6
+						6,
+						7
 					]
 				}
 			],
@@ -180,15 +198,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "game::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-game-Debug-da82e3884cdab6f15144.json",
+					"jsonFile" : "target-game-Debug-8658a1779d7f268c4866.json",
 					"name" : "game",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "game_class::@efba46d9fb97b7572c33",
-					"jsonFile" : "target-game_class-Debug-7ce9cea969b7be939e3d.json",
+					"jsonFile" : "target-game_class-Debug-caf7fc76e671525e0dd0.json",
 					"name" : "game_class",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "logger_class::@807fa824fb12cee923d6",
+					"jsonFile" : "target-logger_class-Debug-925265c4f59b69ca6ee0.json",
+					"name" : "logger_class",
 					"projectIndex" : 0
 				},
 				{

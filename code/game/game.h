@@ -9,16 +9,19 @@
 #include "../reader/input_reader.h"
 #include "../map/console_render.h"
 #include "tracker.h"
+#include "../logger/logger.h"
 
 class PlayerController;
 class FieldRenderer;
 class GameLevel;
 class InputReader;
+class Logger;
 
 class Game { 
 public:
     bool running = true;
     InputReader reader{"config.txt"};
+    Logger log;
     Game () = default;
 
     void executeCommand(const std::string& command);
@@ -28,8 +31,6 @@ public:
     void EndGame(PlayerController &pc);
     void CheckLose(PlayerController &pc, Trakcer &htrack);
     void CheckWin(Tailmap& map, PlayerController &pc, Trakcer &htrack);
-    
-
 };
 
 #endif

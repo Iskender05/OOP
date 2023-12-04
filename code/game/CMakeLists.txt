@@ -4,6 +4,18 @@ add_library ( game_class
         ../controller/playerController.cpp
         ../reader/input_reader.cpp
         ../reader/input_reader.h
+        ../logger/base_mesg.h
+        ../logger/enable_key_log.h
+        ../logger/enable_key_log.cpp
+        ../logger/not_enable_key_log.h
+        ../logger/not_enable_key_log.cpp
+        ../logger/win_log.h
+        ../logger/win_log.cpp
+        ../logger/lose_log.h
+        ../logger/lose_log.cpp        
+        ../logger/logger.h
+        ../logger/logger.cpp
+
         tracker.h
         tracker.cpp
         types.h
@@ -11,4 +23,4 @@ add_library ( game_class
         game.cpp
 )
 
-target_include_directories ( game_class PUBLIC ../controller ../reader )
+target_include_directories ( game_class PUBLIC ../controller ../reader ../logger )

@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "code/game/libgame_class.a"
+			"path" : "code/logger/liblogger_class.a"
 		}
 	],
 	"backtrace" : 1,
@@ -16,7 +16,7 @@
 		],
 		"files" : 
 		[
-			"code/game/CMakeLists.txt"
+			"code/logger/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -32,7 +32,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 14,
+				"line" : 21,
 				"parent" : 0
 			}
 		]
@@ -50,11 +50,15 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/upsik_/OOP/code/game/../controller"
+					"path" : "/home/upsik_/OOP/code/logger/../controller"
 				},
 				{
 					"backtrace" : 2,
-					"path" : "/home/upsik_/OOP/code/game/../reader"
+					"path" : "/home/upsik_/OOP/code/logger/../reader"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/upsik_/OOP/code/logger/../game"
 				}
 			],
 			"language" : "CXX",
@@ -62,18 +66,21 @@
 			[
 				0,
 				1,
-				4,
-				7
+				5,
+				7,
+				9,
+				11,
+				13
 			]
 		}
 	],
-	"id" : "game_class::@efba46d9fb97b7572c33",
-	"name" : "game_class",
-	"nameOnDisk" : "libgame_class.a",
+	"id" : "logger_class::@807fa824fb12cee923d6",
+	"name" : "logger_class",
+	"nameOnDisk" : "liblogger_class.a",
 	"paths" : 
 	{
-		"build" : "code/game",
-		"source" : "code/game"
+		"build" : "code/logger",
+		"source" : "code/logger"
 	},
 	"sourceGroups" : 
 	[
@@ -83,8 +90,11 @@
 			[
 				0,
 				1,
-				4,
-				7
+				5,
+				7,
+				9,
+				11,
+				13
 			]
 		},
 		{
@@ -93,8 +103,11 @@
 			[
 				2,
 				3,
-				5,
-				6
+				4,
+				6,
+				8,
+				10,
+				12
 			]
 		}
 	],
@@ -119,29 +132,62 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "code/game/tracker.h",
+			"path" : "code/logger/base_mesg.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "code/logger/enable_key_log.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "code/game/tracker.cpp",
+			"path" : "code/logger/enable_key_log.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "code/game/types.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"path" : "code/game/game.h",
+			"path" : "code/logger/not_enable_key_log.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "code/game/game.cpp",
+			"path" : "code/logger/not_enable_key_log.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "code/logger/win_log.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "code/logger/win_log.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "code/logger/lose_log.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "code/logger/lose_log.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "code/logger/logger.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "code/logger/logger.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

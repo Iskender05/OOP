@@ -101,5 +101,5 @@ void ConsoleRender::lose() const
 
 void ConsoleRender::win() const
 {
-    
+    std::cout << "You have win!" << std::endl;
 }

@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_game: phony || cmake_object_order_depend
 build CMakeFiles/game.dir/code/main.cpp.o: CXX_COMPILER__game_unscanned_Debug /home/upsik_/OOP/code/main.cpp || cmake_object_order_depends_target_game
   DEP_FILE = CMakeFiles/game.dir/code/main.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/upsik_/OOP/code/controller/../player -I/home/upsik_/OOP/code/events/../controller -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -I/home/upsik_/OOP/code/player/../controller
+  INCLUDES = -I/home/upsik_/OOP/code/controller/../player -I/home/upsik_/OOP/code/events/../controller -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -I/home/upsik_/OOP/code/player/../controller
   OBJECT_DIR = CMakeFiles/game.dir
   OBJECT_FILE_DIR = CMakeFiles/game.dir/code
 
@@ -396,28 +396,63 @@ build cmake_object_order_depends_target_game_class: phony || code/game/CMakeFile
 build code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/controller/playerController.cpp || cmake_object_order_depends_target_game_class
   DEP_FILE = code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader
+  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger
   OBJECT_DIR = code/game/CMakeFiles/game_class.dir
   OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir/__/controller
 
 build code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/reader/input_reader.cpp || cmake_object_order_depends_target_game_class
   DEP_FILE = code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader
+  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger
   OBJECT_DIR = code/game/CMakeFiles/game_class.dir
   OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir/__/reader
+
+build code/game/CMakeFiles/game_class.dir/__/logger/enable_key_log.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/logger/enable_key_log.cpp || cmake_object_order_depends_target_game_class
+  DEP_FILE = code/game/CMakeFiles/game_class.dir/__/logger/enable_key_log.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger
+  OBJECT_DIR = code/game/CMakeFiles/game_class.dir
+  OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir/__/logger
+
+build code/game/CMakeFiles/game_class.dir/__/logger/not_enable_key_log.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/logger/not_enable_key_log.cpp || cmake_object_order_depends_target_game_class
+  DEP_FILE = code/game/CMakeFiles/game_class.dir/__/logger/not_enable_key_log.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger
+  OBJECT_DIR = code/game/CMakeFiles/game_class.dir
+  OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir/__/logger
+
+build code/game/CMakeFiles/game_class.dir/__/logger/win_log.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/logger/win_log.cpp || cmake_object_order_depends_target_game_class
+  DEP_FILE = code/game/CMakeFiles/game_class.dir/__/logger/win_log.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger
+  OBJECT_DIR = code/game/CMakeFiles/game_class.dir
+  OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir/__/logger
+
+build code/game/CMakeFiles/game_class.dir/__/logger/lose_log.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/logger/lose_log.cpp || cmake_object_order_depends_target_game_class
+  DEP_FILE = code/game/CMakeFiles/game_class.dir/__/logger/lose_log.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger
+  OBJECT_DIR = code/game/CMakeFiles/game_class.dir
+  OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir/__/logger
+
+build code/game/CMakeFiles/game_class.dir/__/logger/logger.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/logger/logger.cpp || cmake_object_order_depends_target_game_class
+  DEP_FILE = code/game/CMakeFiles/game_class.dir/__/logger/logger.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger
+  OBJECT_DIR = code/game/CMakeFiles/game_class.dir
+  OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir/__/logger
 
 build code/game/CMakeFiles/game_class.dir/tracker.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/game/tracker.cpp || cmake_object_order_depends_target_game_class
   DEP_FILE = code/game/CMakeFiles/game_class.dir/tracker.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader
+  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger
   OBJECT_DIR = code/game/CMakeFiles/game_class.dir
   OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir
 
 build code/game/CMakeFiles/game_class.dir/game.cpp.o: CXX_COMPILER__game_class_unscanned_Debug /home/upsik_/OOP/code/game/game.cpp || cmake_object_order_depends_target_game_class
   DEP_FILE = code/game/CMakeFiles/game_class.dir/game.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader
+  INCLUDES = -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger
   OBJECT_DIR = code/game/CMakeFiles/game_class.dir
   OBJECT_FILE_DIR = code/game/CMakeFiles/game_class.dir
 
@@ -429,7 +464,7 @@ build code/game/CMakeFiles/game_class.dir/game.cpp.o: CXX_COMPILER__game_class_u
 #############################################
 # Link the static library code/game/libgame_class.a
 
-build code/game/libgame_class.a: CXX_STATIC_LIBRARY_LINKER__game_class_Debug code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o code/game/CMakeFiles/game_class.dir/tracker.cpp.o code/game/CMakeFiles/game_class.dir/game.cpp.o
+build code/game/libgame_class.a: CXX_STATIC_LIBRARY_LINKER__game_class_Debug code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o code/game/CMakeFiles/game_class.dir/__/logger/enable_key_log.cpp.o code/game/CMakeFiles/game_class.dir/__/logger/not_enable_key_log.cpp.o code/game/CMakeFiles/game_class.dir/__/logger/win_log.cpp.o code/game/CMakeFiles/game_class.dir/__/logger/lose_log.cpp.o code/game/CMakeFiles/game_class.dir/__/logger/logger.cpp.o code/game/CMakeFiles/game_class.dir/tracker.cpp.o code/game/CMakeFiles/game_class.dir/game.cpp.o
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = code/game/CMakeFiles/game_class.dir
   POST_BUILD = :
@@ -583,6 +618,109 @@ build code/reader/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build code/reader/rebuild_cache: phony code/reader/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/upsik_/OOP/code/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target logger_class
+
+
+#############################################
+# Order-only phony target for logger_class
+
+build cmake_object_order_depends_target_logger_class: phony || code/logger/CMakeFiles/logger_class.dir
+
+build code/logger/CMakeFiles/logger_class.dir/__/controller/playerController.cpp.o: CXX_COMPILER__logger_class_unscanned_Debug /home/upsik_/OOP/code/controller/playerController.cpp || cmake_object_order_depends_target_logger_class
+  DEP_FILE = code/logger/CMakeFiles/logger_class.dir/__/controller/playerController.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game
+  OBJECT_DIR = code/logger/CMakeFiles/logger_class.dir
+  OBJECT_FILE_DIR = code/logger/CMakeFiles/logger_class.dir/__/controller
+
+build code/logger/CMakeFiles/logger_class.dir/__/reader/input_reader.cpp.o: CXX_COMPILER__logger_class_unscanned_Debug /home/upsik_/OOP/code/reader/input_reader.cpp || cmake_object_order_depends_target_logger_class
+  DEP_FILE = code/logger/CMakeFiles/logger_class.dir/__/reader/input_reader.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game
+  OBJECT_DIR = code/logger/CMakeFiles/logger_class.dir
+  OBJECT_FILE_DIR = code/logger/CMakeFiles/logger_class.dir/__/reader
+
+build code/logger/CMakeFiles/logger_class.dir/enable_key_log.cpp.o: CXX_COMPILER__logger_class_unscanned_Debug /home/upsik_/OOP/code/logger/enable_key_log.cpp || cmake_object_order_depends_target_logger_class
+  DEP_FILE = code/logger/CMakeFiles/logger_class.dir/enable_key_log.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game
+  OBJECT_DIR = code/logger/CMakeFiles/logger_class.dir
+  OBJECT_FILE_DIR = code/logger/CMakeFiles/logger_class.dir
+
+build code/logger/CMakeFiles/logger_class.dir/not_enable_key_log.cpp.o: CXX_COMPILER__logger_class_unscanned_Debug /home/upsik_/OOP/code/logger/not_enable_key_log.cpp || cmake_object_order_depends_target_logger_class
+  DEP_FILE = code/logger/CMakeFiles/logger_class.dir/not_enable_key_log.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game
+  OBJECT_DIR = code/logger/CMakeFiles/logger_class.dir
+  OBJECT_FILE_DIR = code/logger/CMakeFiles/logger_class.dir
+
+build code/logger/CMakeFiles/logger_class.dir/win_log.cpp.o: CXX_COMPILER__logger_class_unscanned_Debug /home/upsik_/OOP/code/logger/win_log.cpp || cmake_object_order_depends_target_logger_class
+  DEP_FILE = code/logger/CMakeFiles/logger_class.dir/win_log.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game
+  OBJECT_DIR = code/logger/CMakeFiles/logger_class.dir
+  OBJECT_FILE_DIR = code/logger/CMakeFiles/logger_class.dir
+
+build code/logger/CMakeFiles/logger_class.dir/lose_log.cpp.o: CXX_COMPILER__logger_class_unscanned_Debug /home/upsik_/OOP/code/logger/lose_log.cpp || cmake_object_order_depends_target_logger_class
+  DEP_FILE = code/logger/CMakeFiles/logger_class.dir/lose_log.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game
+  OBJECT_DIR = code/logger/CMakeFiles/logger_class.dir
+  OBJECT_FILE_DIR = code/logger/CMakeFiles/logger_class.dir
+
+build code/logger/CMakeFiles/logger_class.dir/logger.cpp.o: CXX_COMPILER__logger_class_unscanned_Debug /home/upsik_/OOP/code/logger/logger.cpp || cmake_object_order_depends_target_logger_class
+  DEP_FILE = code/logger/CMakeFiles/logger_class.dir/logger.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game
+  OBJECT_DIR = code/logger/CMakeFiles/logger_class.dir
+  OBJECT_FILE_DIR = code/logger/CMakeFiles/logger_class.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target logger_class
+
+
+#############################################
+# Link the static library code/logger/liblogger_class.a
+
+build code/logger/liblogger_class.a: CXX_STATIC_LIBRARY_LINKER__logger_class_Debug code/logger/CMakeFiles/logger_class.dir/__/controller/playerController.cpp.o code/logger/CMakeFiles/logger_class.dir/__/reader/input_reader.cpp.o code/logger/CMakeFiles/logger_class.dir/enable_key_log.cpp.o code/logger/CMakeFiles/logger_class.dir/not_enable_key_log.cpp.o code/logger/CMakeFiles/logger_class.dir/win_log.cpp.o code/logger/CMakeFiles/logger_class.dir/lose_log.cpp.o code/logger/CMakeFiles/logger_class.dir/logger.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = code/logger/CMakeFiles/logger_class.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = code/logger/liblogger_class.a
+  TARGET_PDB = logger_class.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build code/logger/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/upsik_/OOP/build/code/logger && /usr/bin/ccmake -S/home/upsik_/OOP -B/home/upsik_/OOP/build
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build code/logger/edit_cache: phony code/logger/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build code/logger/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/upsik_/OOP/build/code/logger && /usr/bin/cmake --regenerate-during-build -S/home/upsik_/OOP -B/home/upsik_/OOP/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build code/logger/rebuild_cache: phony code/logger/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build controller: phony code/controller/libcontroller.a
@@ -597,11 +735,15 @@ build libevents.a: phony code/events/libevents.a
 
 build libgame_class.a: phony code/game/libgame_class.a
 
+build liblogger_class.a: phony code/logger/liblogger_class.a
+
 build libmap.a: phony code/map/libmap.a
 
 build libplayer.a: phony code/player/libplayer.a
 
 build libreader.a: phony code/reader/libreader.a
+
+build logger_class: phony code/logger/liblogger_class.a
 
 build map: phony code/map/libmap.a
 
@@ -624,7 +766,7 @@ build all: phony game code/all
 #############################################
 # Folder: /home/upsik_/OOP/build/code
 
-build code/all: phony code/controller/all code/events/all code/map/all code/game/all code/player/all code/reader/all
+build code/all: phony code/controller/all code/events/all code/map/all code/game/all code/player/all code/reader/all code/logger/all
 
 # =============================================================================
 
@@ -646,6 +788,13 @@ build code/events/all: phony code/events/libevents.a
 # Folder: /home/upsik_/OOP/build/code/game
 
 build code/game/all: phony code/game/libgame_class.a
+
+# =============================================================================
+
+#############################################
+# Folder: /home/upsik_/OOP/build/code/logger
+
+build code/logger/all: phony code/logger/liblogger_class.a
 
 # =============================================================================
 
@@ -675,14 +824,14 @@ build code/reader/all: phony code/reader/libreader.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/upsik_/OOP/CMakeLists.txt /home/upsik_/OOP/code/CMakeLists.txt /home/upsik_/OOP/code/controller/CMakeLists.txt /home/upsik_/OOP/code/events/CMakeLists.txt /home/upsik_/OOP/code/game/CMakeLists.txt /home/upsik_/OOP/code/map/CMakeLists.txt /home/upsik_/OOP/code/player/CMakeLists.txt /home/upsik_/OOP/code/reader/CMakeLists.txt /usr/share/cmake-3.27/Modules/CMakeCInformation.cmake /usr/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.27/Modules/Platform/Linux.cmake /usr/share/cmake-3.27/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.27.4/CMakeCCompiler.cmake CMakeFiles/3.27.4/CMakeCXXCompiler.cmake CMakeFiles/3.27.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/upsik_/OOP/CMakeLists.txt /home/upsik_/OOP/code/CMakeLists.txt /home/upsik_/OOP/code/controller/CMakeLists.txt /home/upsik_/OOP/code/events/CMakeLists.txt /home/upsik_/OOP/code/game/CMakeLists.txt /home/upsik_/OOP/code/logger/CMakeLists.txt /home/upsik_/OOP/code/map/CMakeLists.txt /home/upsik_/OOP/code/player/CMakeLists.txt /home/upsik_/OOP/code/reader/CMakeLists.txt /usr/share/cmake-3.27/Modules/CMakeCInformation.cmake /usr/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.27/Modules/Platform/Linux.cmake /usr/share/cmake-3.27/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.27.4/CMakeCCompiler.cmake CMakeFiles/3.27.4/CMakeCXXCompiler.cmake CMakeFiles/3.27.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/upsik_/OOP/CMakeLists.txt /home/upsik_/OOP/code/CMakeLists.txt /home/upsik_/OOP/code/controller/CMakeLists.txt /home/upsik_/OOP/code/events/CMakeLists.txt /home/upsik_/OOP/code/game/CMakeLists.txt /home/upsik_/OOP/code/map/CMakeLists.txt /home/upsik_/OOP/code/player/CMakeLists.txt /home/upsik_/OOP/code/reader/CMakeLists.txt /usr/share/cmake-3.27/Modules/CMakeCInformation.cmake /usr/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.27/Modules/Platform/Linux.cmake /usr/share/cmake-3.27/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.27.4/CMakeCCompiler.cmake CMakeFiles/3.27.4/CMakeCXXCompiler.cmake CMakeFiles/3.27.4/CMakeSystem.cmake: phony
+build /home/upsik_/OOP/CMakeLists.txt /home/upsik_/OOP/code/CMakeLists.txt /home/upsik_/OOP/code/controller/CMakeLists.txt /home/upsik_/OOP/code/events/CMakeLists.txt /home/upsik_/OOP/code/game/CMakeLists.txt /home/upsik_/OOP/code/logger/CMakeLists.txt /home/upsik_/OOP/code/map/CMakeLists.txt /home/upsik_/OOP/code/player/CMakeLists.txt /home/upsik_/OOP/code/reader/CMakeLists.txt /usr/share/cmake-3.27/Modules/CMakeCInformation.cmake /usr/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.27/Modules/Compiler/GNU.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.27/Modules/Platform/Linux.cmake /usr/share/cmake-3.27/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.27.4/CMakeCCompiler.cmake CMakeFiles/3.27.4/CMakeCXXCompiler.cmake CMakeFiles/3.27.4/CMakeSystem.cmake: phony
 
 
 #############################################

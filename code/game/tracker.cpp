@@ -48,5 +48,9 @@ void Trakcer::observer(Types types)
             render.mapRender(map, pc);
             break;
         }
+        case Types::CHECK_WIN:
+        {
+            render.win();
+        }
     }
 }

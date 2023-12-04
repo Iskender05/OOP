@@ -20,7 +20,6 @@ enum class Action : uint8_t
     endGame
 };
 
-
 class InputReader : public Input 
 {
 public:
@@ -28,8 +27,10 @@ public:
     using ControlMap = std::unordered_map<char, Action>;
 
     ControlMap controlMap_;
+    char input;
+    Action action;
 
-    char in ( void ) const override;
+    char in ( void ) const override;   
     uint8_t readInput( PlayerController *playerController);
 private:
 

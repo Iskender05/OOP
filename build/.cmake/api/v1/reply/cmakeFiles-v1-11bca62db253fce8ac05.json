@@ -146,6 +146,9 @@
 		},
 		{
 			"path" : "code/reader/CMakeLists.txt"
+		},
+		{
+			"path" : "code/logger/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

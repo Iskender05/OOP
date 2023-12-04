@@ -1,7 +1,6 @@
 #include "../game/game.h"
 #include <iostream>
 
-
 void Game::StartGame()
 {
     running = true;
@@ -55,29 +54,54 @@ void Game::executeCommand(const std::string& command) {
 
 void Game::PlayGame(Tailmap &map, PlayerController &pc, Trakcer &htrack)
 {
-    while ( running )
-    {
-        CheckLose (pc, htrack);
-        CheckWin (map, pc, htrack);
+    //log.write_message (  ); Добавить событие начала новой игры
 
-        if ( !running )
+    while (running)
+    {
+        CheckLose(pc, htrack);
+        CheckWin(map, pc, htrack);
+
+        if (!running)
             break;
 
-        htrack.observer ( Types::PLAY );
-        uint8_t ret = reader.readInput ( &pc );        
-        if ( ret == 2 )
-            EndGame ( pc );
+        htrack.observer(Types::PLAY);
+        uint8_t ret = reader.readInput(&pc);
+
+        if (ret == 1) // Проверяем, была ли клавиша действительно нажата
+        {
+            log.write_message(new EnabelKeyLog(&reader));
+        }
+        else
+        {
+            log.write_message(new NotEnabelKeyLog(&reader));
+        }
+
+        if (ret == 2)
+            EndGame(pc);
     }
 
-    htrack.observer ( Types::OFFER );
-    char choice = reader.readInput ( &pc );
+    htrack.observer(Types::OFFER);
+    char choice = reader.readInput(&pc);
 
-    if ( choice ) {
+    if (choice)
+    {
+        if (ret == 1) // Проверяем, была ли клавиша действительно нажата
+        {
+            log.write_message(new EnabelKeyLog(&reader));
+        }
+        else
+        {
+            log.write_message(new NotEnabelKeyLog(&reader));
+        }
+
         StartGame();
-    } else {
-        htrack.observer ( Types::BYE );
+    }
+    else
+    {
+        htrack.observer(Types::BYE);
     }
 }
+
 
 
 void Game::EndGame(PlayerController &pc)
@@ -93,6 +117,7 @@ void Game::CheckLose(PlayerController &pc, Trakcer &htrack)
     if (pc.get_player()->getHP().hp <= 0) 
     {
         htrack.observer ( Types::CHECK_LOSE );
+        log.write_message( new LoseLog(&pc) );
         EndGame(pc);
     }
 }
@@ -103,6 +128,7 @@ void Game::CheckWin(Tailmap& map, PlayerController &pc, Trakcer &htrack)
     if ( pc.get_player()->getPostion() == map.get_EndGame() )
     {
         htrack.observer ( Types::CHECK_WIN );
+        log.write_message( new WinLog(&pc) );
         EndGame(pc);
     }
 }

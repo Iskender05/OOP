@@ -6,7 +6,6 @@
 #include "../map/game_render.h"
 #include "../controller/playerController.h"
 
-
 class Trakcer
 {
 public:

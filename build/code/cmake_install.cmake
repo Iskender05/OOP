@@ -50,6 +50,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/upsik_/OOP/build/code/game/cmake_install.cmake")
   include("/home/upsik_/OOP/build/code/player/cmake_install.cmake")
   include("/home/upsik_/OOP/build/code/reader/cmake_install.cmake")
+  include("/home/upsik_/OOP/build/code/logger/cmake_install.cmake")
 
 endif()
 

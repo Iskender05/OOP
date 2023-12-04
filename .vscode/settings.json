@@ -5,6 +5,8 @@
         "cstdlib": "cpp",
         "functional": "cpp",
         "ostream": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "iosfwd": "cpp",
+        "*.tcc": "cpp"
     }
 }

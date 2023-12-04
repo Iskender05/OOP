@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/controller/../player -I/home/upsik_/OOP/code/events/../controller -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -I/home/upsik_/OOP/code/player/../controller -g -o CMakeFiles/game.dir/code/main.cpp.o -c /home/upsik_/OOP/code/main.cpp",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/controller/../player -I/home/upsik_/OOP/code/events/../controller -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger -I/home/upsik_/OOP/code/map/../events -I/home/upsik_/OOP/code/map/..controller -I/home/upsik_/OOP/code/player/../controller -g -o CMakeFiles/game.dir/code/main.cpp.o -c /home/upsik_/OOP/code/main.cpp",
   "file": "/home/upsik_/OOP/code/main.cpp",
   "output": "CMakeFiles/game.dir/code/main.cpp.o"
 },
@@ -85,25 +85,55 @@
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -g -o code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o -c /home/upsik_/OOP/code/controller/playerController.cpp",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger -g -o code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o -c /home/upsik_/OOP/code/controller/playerController.cpp",
   "file": "/home/upsik_/OOP/code/controller/playerController.cpp",
   "output": "code/game/CMakeFiles/game_class.dir/__/controller/playerController.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -g -o code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o -c /home/upsik_/OOP/code/reader/input_reader.cpp",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger -g -o code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o -c /home/upsik_/OOP/code/reader/input_reader.cpp",
   "file": "/home/upsik_/OOP/code/reader/input_reader.cpp",
   "output": "code/game/CMakeFiles/game_class.dir/__/reader/input_reader.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -g -o code/game/CMakeFiles/game_class.dir/tracker.cpp.o -c /home/upsik_/OOP/code/game/tracker.cpp",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger -g -o code/game/CMakeFiles/game_class.dir/__/logger/enable_key_log.cpp.o -c /home/upsik_/OOP/code/logger/enable_key_log.cpp",
+  "file": "/home/upsik_/OOP/code/logger/enable_key_log.cpp",
+  "output": "code/game/CMakeFiles/game_class.dir/__/logger/enable_key_log.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger -g -o code/game/CMakeFiles/game_class.dir/__/logger/not_enable_key_log.cpp.o -c /home/upsik_/OOP/code/logger/not_enable_key_log.cpp",
+  "file": "/home/upsik_/OOP/code/logger/not_enable_key_log.cpp",
+  "output": "code/game/CMakeFiles/game_class.dir/__/logger/not_enable_key_log.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger -g -o code/game/CMakeFiles/game_class.dir/__/logger/win_log.cpp.o -c /home/upsik_/OOP/code/logger/win_log.cpp",
+  "file": "/home/upsik_/OOP/code/logger/win_log.cpp",
+  "output": "code/game/CMakeFiles/game_class.dir/__/logger/win_log.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger -g -o code/game/CMakeFiles/game_class.dir/__/logger/lose_log.cpp.o -c /home/upsik_/OOP/code/logger/lose_log.cpp",
+  "file": "/home/upsik_/OOP/code/logger/lose_log.cpp",
+  "output": "code/game/CMakeFiles/game_class.dir/__/logger/lose_log.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger -g -o code/game/CMakeFiles/game_class.dir/__/logger/logger.cpp.o -c /home/upsik_/OOP/code/logger/logger.cpp",
+  "file": "/home/upsik_/OOP/code/logger/logger.cpp",
+  "output": "code/game/CMakeFiles/game_class.dir/__/logger/logger.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger -g -o code/game/CMakeFiles/game_class.dir/tracker.cpp.o -c /home/upsik_/OOP/code/game/tracker.cpp",
   "file": "/home/upsik_/OOP/code/game/tracker.cpp",
   "output": "code/game/CMakeFiles/game_class.dir/tracker.cpp.o"
 },
 {
   "directory": "/home/upsik_/OOP/build",
-  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -g -o code/game/CMakeFiles/game_class.dir/game.cpp.o -c /home/upsik_/OOP/code/game/game.cpp",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/game/../controller -I/home/upsik_/OOP/code/game/../reader -I/home/upsik_/OOP/code/game/../logger -g -o code/game/CMakeFiles/game_class.dir/game.cpp.o -c /home/upsik_/OOP/code/game/game.cpp",
   "file": "/home/upsik_/OOP/code/game/game.cpp",
   "output": "code/game/CMakeFiles/game_class.dir/game.cpp.o"
 },
@@ -118,5 +148,47 @@
   "command": "/usr/bin/g++ -g -o code/reader/CMakeFiles/reader.dir/input_reader.cpp.o -c /home/upsik_/OOP/code/reader/input_reader.cpp",
   "file": "/home/upsik_/OOP/code/reader/input_reader.cpp",
   "output": "code/reader/CMakeFiles/reader.dir/input_reader.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game -g -o code/logger/CMakeFiles/logger_class.dir/__/controller/playerController.cpp.o -c /home/upsik_/OOP/code/controller/playerController.cpp",
+  "file": "/home/upsik_/OOP/code/controller/playerController.cpp",
+  "output": "code/logger/CMakeFiles/logger_class.dir/__/controller/playerController.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game -g -o code/logger/CMakeFiles/logger_class.dir/__/reader/input_reader.cpp.o -c /home/upsik_/OOP/code/reader/input_reader.cpp",
+  "file": "/home/upsik_/OOP/code/reader/input_reader.cpp",
+  "output": "code/logger/CMakeFiles/logger_class.dir/__/reader/input_reader.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game -g -o code/logger/CMakeFiles/logger_class.dir/enable_key_log.cpp.o -c /home/upsik_/OOP/code/logger/enable_key_log.cpp",
+  "file": "/home/upsik_/OOP/code/logger/enable_key_log.cpp",
+  "output": "code/logger/CMakeFiles/logger_class.dir/enable_key_log.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game -g -o code/logger/CMakeFiles/logger_class.dir/not_enable_key_log.cpp.o -c /home/upsik_/OOP/code/logger/not_enable_key_log.cpp",
+  "file": "/home/upsik_/OOP/code/logger/not_enable_key_log.cpp",
+  "output": "code/logger/CMakeFiles/logger_class.dir/not_enable_key_log.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game -g -o code/logger/CMakeFiles/logger_class.dir/win_log.cpp.o -c /home/upsik_/OOP/code/logger/win_log.cpp",
+  "file": "/home/upsik_/OOP/code/logger/win_log.cpp",
+  "output": "code/logger/CMakeFiles/logger_class.dir/win_log.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game -g -o code/logger/CMakeFiles/logger_class.dir/lose_log.cpp.o -c /home/upsik_/OOP/code/logger/lose_log.cpp",
+  "file": "/home/upsik_/OOP/code/logger/lose_log.cpp",
+  "output": "code/logger/CMakeFiles/logger_class.dir/lose_log.cpp.o"
+},
+{
+  "directory": "/home/upsik_/OOP/build",
+  "command": "/usr/bin/g++ -I/home/upsik_/OOP/code/logger/../controller -I/home/upsik_/OOP/code/logger/../reader -I/home/upsik_/OOP/code/logger/../game -g -o code/logger/CMakeFiles/logger_class.dir/logger.cpp.o -c /home/upsik_/OOP/code/logger/logger.cpp",
+  "file": "/home/upsik_/OOP/code/logger/logger.cpp",
+  "output": "code/logger/CMakeFiles/logger_class.dir/logger.cpp.o"
 }
 ]

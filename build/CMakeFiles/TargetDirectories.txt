@@ -21,3 +21,6 @@
 /home/upsik_/OOP/build/code/reader/CMakeFiles/reader.dir
 /home/upsik_/OOP/build/code/reader/CMakeFiles/edit_cache.dir
 /home/upsik_/OOP/build/code/reader/CMakeFiles/rebuild_cache.dir
+/home/upsik_/OOP/build/code/logger/CMakeFiles/logger_class.dir
+/home/upsik_/OOP/build/code/logger/CMakeFiles/edit_cache.dir
+/home/upsik_/OOP/build/code/logger/CMakeFiles/rebuild_cache.dir

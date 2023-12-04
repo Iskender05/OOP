@@ -64,32 +64,30 @@ char InputReader::in(void) const
 
 // Считывание команды с клавиатуры
 uint8_t InputReader::readInput(PlayerController *playerController) {
-    char input = in();
-
-    auto it = controlMap_.find(input);
-    if (it != controlMap_.end()) {
-        switch(it->second) {
-            case Action::moveUp:
-                playerController->move(Direction::W_key);
-                break;
-            case Action::moveDown:
-                playerController->move(Direction::S_key);
-                break;
-            case Action::moveLeft:
-                playerController->move(Direction::A_key);
-                break;
-            case Action::moveRight:
-                playerController->move(Direction::D_key);
-                break;
-            case Action::startGame:
-                return 1;
-                break;
-            case Action::endGame:
-                return 2;
-                break;
-            default:
-                break;
-        }
+    input = in();
+    action = controlMap_[input];
+    
+    switch(action) {
+        case Action::moveUp:
+            playerController->move(Direction::W_key);
+            break;
+        case Action::moveDown:
+            playerController->move(Direction::S_key);
+            break;
+        case Action::moveLeft:
+            playerController->move(Direction::A_key);
+            break;
+        case Action::moveRight:
+            playerController->move(Direction::D_key);
+            break;
+        case Action::startGame:
+            return 1;
+            break;
+        case Action::endGame:
+            return 2;
+            break;
+        default:
+            break;
     }
     
     return 0;

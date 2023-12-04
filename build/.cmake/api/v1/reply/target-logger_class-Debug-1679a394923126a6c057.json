@@ -32,7 +32,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 21,
+				"line" : 28,
 				"parent" : 0
 			}
 		]
@@ -59,6 +59,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "/home/upsik_/OOP/code/logger/../game"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/upsik_/OOP/code/logger/../map"
 				}
 			],
 			"language" : "CXX",
@@ -66,11 +70,15 @@
 			[
 				0,
 				1,
-				5,
-				7,
-				9,
-				11,
-				13
+				3,
+				6,
+				8,
+				10,
+				12,
+				14,
+				16,
+				19,
+				21
 			]
 		}
 	],
@@ -90,11 +98,15 @@
 			[
 				0,
 				1,
-				5,
-				7,
-				9,
-				11,
-				13
+				3,
+				6,
+				8,
+				10,
+				12,
+				14,
+				16,
+				19,
+				21
 			]
 		},
 		{
@@ -102,12 +114,16 @@
 			"sourceIndexes" : 
 			[
 				2,
-				3,
 				4,
-				6,
-				8,
-				10,
-				12
+				5,
+				7,
+				9,
+				11,
+				13,
+				15,
+				17,
+				18,
+				20
 			]
 		}
 	],
@@ -127,8 +143,14 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "code/reader/input_reader.h",
+			"path" : "code/map/tailmap.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "code/map/tailmap.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
@@ -188,6 +210,44 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "code/logger/logger.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "code/logger/new_game_log.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "code/logger/new_game_log.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "code/logger/output.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "code/logger/file_out.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "code/logger/file_out.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "code/logger/terminal_out.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "code/logger/terminal_out.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

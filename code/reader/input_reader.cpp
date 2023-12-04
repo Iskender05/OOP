@@ -63,32 +63,43 @@ char InputReader::in(void) const
 }
 
 // Считывание команды с клавиатуры
-uint8_t InputReader::readInput(PlayerController *playerController) {
-    input = in();
-    action = controlMap_[input];
-    
-    switch(action) {
-        case Action::moveUp:
-            playerController->move(Direction::W_key);
-            break;
-        case Action::moveDown:
-            playerController->move(Direction::S_key);
-            break;
-        case Action::moveLeft:
-            playerController->move(Direction::A_key);
-            break;
-        case Action::moveRight:
-            playerController->move(Direction::D_key);
-            break;
-        case Action::startGame:
-            return 1;
-            break;
-        case Action::endGame:
-            return 2;
-            break;
-        default:
-            break;
+uint8_t InputReader::readInput(PlayerController *playerController, Logger* log ) {
+    char input = in();
+    this->input = input;
+
+    auto it = controlMap_.find(input);
+    if (it != controlMap_.end()) {
+        switch(it->second) {
+            case Action::moveUp:
+                playerController->move(Direction::W_key);
+                this->action = Action::moveUp;
+                log->write_message( new EnabelKeyLog(this) );
+                break;
+            case Action::moveDown:
+                playerController->move(Direction::S_key);
+                this->action = Action::moveDown;
+                log->write_message( new EnabelKeyLog(this) );
+                break;
+            case Action::moveLeft:
+                playerController->move(Direction::A_key);
+                this->action = Action::moveLeft;
+                log->write_message( new EnabelKeyLog(this) );
+                break;
+            case Action::moveRight:
+                playerController->move(Direction::D_key);
+                this->action = Action::moveRight;
+                log->write_message( new EnabelKeyLog(this) );
+                break;
+            case Action::startGame:
+                return 1;
+                break;
+            case Action::endGame:
+                return 2;
+                break;
+            default:
+                log->write_message( new NotEnabelKeyLog(this) );
+                break;
+        }
     }
-    
     return 0;
 }

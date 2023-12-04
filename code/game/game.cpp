@@ -54,7 +54,8 @@ void Game::executeCommand(const std::string& command) {
 
 void Game::PlayGame(Tailmap &map, PlayerController &pc, Trakcer &htrack)
 {
-    //log.write_message (  ); Добавить событие начала новой игры
+    // Добавим событие начала новой игры в лог
+    log.write_message( new NewGameLog(&pc, &map) );
 
     while (running)
     {
@@ -65,35 +66,17 @@ void Game::PlayGame(Tailmap &map, PlayerController &pc, Trakcer &htrack)
             break;
 
         htrack.observer(Types::PLAY);
-        uint8_t ret = reader.readInput(&pc);
-
-        if (ret == 1) // Проверяем, была ли клавиша действительно нажата
-        {
-            log.write_message(new EnabelKeyLog(&reader));
-        }
-        else
-        {
-            log.write_message(new NotEnabelKeyLog(&reader));
-        }
-
+        uint8_t ret = reader.readInput(&pc, &log);
         if (ret == 2)
             EndGame(pc);
     }
 
     htrack.observer(Types::OFFER);
-    char choice = reader.readInput(&pc);
+
+    char choice = reader.readInput(&pc, &log);
 
     if (choice)
     {
-        if (ret == 1) // Проверяем, была ли клавиша действительно нажата
-        {
-            log.write_message(new EnabelKeyLog(&reader));
-        }
-        else
-        {
-            log.write_message(new NotEnabelKeyLog(&reader));
-        }
-
         StartGame();
     }
     else
@@ -109,6 +92,7 @@ void Game::EndGame(PlayerController &pc)
     running = false;
 
     std::cout << "Thank you for playing!\n Press any key" << std::endl;
+    log.print_logs();
 }
 
 

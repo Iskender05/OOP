@@ -5,10 +5,12 @@
 #include <fstream>
 #include <unordered_map>
 #include "../controller/playerController.h"
-#include <functional>
+#include "../logger/logger.h"
+#include <vector>
 #include "input.h"
 
 class Game;
+class Logger;
 
 enum class Action : uint8_t 
 {
@@ -17,7 +19,8 @@ enum class Action : uint8_t
     moveLeft, 
     moveRight, 
     startGame, 
-    endGame
+    endGame,
+    error
 };
 
 class InputReader : public Input 
@@ -31,7 +34,7 @@ public:
     Action action;
 
     char in ( void ) const override;   
-    uint8_t readInput( PlayerController *playerController);
+    uint8_t readInput( PlayerController *playerController, Logger* log );
 private:
 
     // Загрузка клавиш управления из файла

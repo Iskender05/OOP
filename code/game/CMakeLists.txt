@@ -15,6 +15,13 @@ add_library ( game_class
         ../logger/lose_log.cpp        
         ../logger/logger.h
         ../logger/logger.cpp
+        ../logger/new_game_log.h
+        ../logger/new_game_log.cpp
+        ../logger/output.h
+        ../logger/file_out.h
+        ../logger/file_out.cpp
+        ../logger/terminal_out.h
+        ../logger/terminal_out.cpp
 
         tracker.h
         tracker.cpp

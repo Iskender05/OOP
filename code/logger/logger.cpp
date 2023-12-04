@@ -1,23 +1,5 @@
 #include "logger.h"
 
-FileOut::FileOut( std::string file_path )
-{
-    file.open ( file_path );
-}
-FileOut::~FileOut()
-{
-    file.close ();
-}
-
-void FileOut::out ( BaseMesg& message )
-{
-    file << message;
-}
-
-void TerminalOut::out ( BaseMesg& message )
-{
-    std::cout << message;
-}
 
 Logger::Logger()
 {
@@ -47,18 +29,29 @@ Logger::Logger()
     }
     default:
         std::cout << "Не верный ввод" << std::endl;
+        outwrite = nullptr;
         break;
     }
 }
 
 Logger::~Logger()
 {
-    if ( outwrite != nullptr )
-        delete outwrite;
+    for ( auto it : recentLogs )
+        delete it;
+
+    recentLogs.clear(); 
+
+    delete outwrite;
 }
 
 void Logger::write_message ( BaseMesg* message )
 {
-    outwrite->out( *message );
-    delete message;
+    recentLogs.push_back ( message );
+    //outwrite->out( *message );
+}
+
+void Logger::print_logs()
+{
+    for ( auto it : recentLogs )
+        outwrite->out ( *it );
 }

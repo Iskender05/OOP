@@ -8,46 +8,24 @@
 #include "lose_log.h"
 #include "not_enable_key_log.h"
 #include "win_log.h"
+#include "new_game_log.h"
+#include "output.h"
+#include "terminal_out.h"
+#include "file_out.h"
 
-class Output
-{
-public:
-    Output () = default;
-    virtual ~Output () = default;
-
-    virtual void out ( BaseMesg& message ) = 0;
-};
-
-class FileOut : public Output
-{
-    std::ofstream file;
-
-public:
-    FileOut( std::string file_path );
-    virtual ~FileOut();
-
-    void out ( BaseMesg& message ) override;
-};
-
-class TerminalOut : public Output
-{
-public:
-    TerminalOut() = default;
-    virtual ~TerminalOut() = default;
-
-    void out ( BaseMesg& message ) override;
-};
 
 class Logger
 {
 private:
     Output* outwrite;
+    std::vector<BaseMesg*> recentLogs;
 
 public:
     Logger();
     ~Logger();
 
-    void write_message ( BaseMesg* message );
+    void write_message(BaseMesg* message);
+    void print_logs();
 };
 
-#endif//LOGGER_H
+#endif // LOGGER_H

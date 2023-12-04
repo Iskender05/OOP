@@ -4,6 +4,8 @@
 #include "base_mesg.h"
 #include "../reader/input_reader.h"
 
+class InputReader;
+
 class NotEnabelKeyLog : public BaseMesg
 {
     InputReader* reader;
@@ -16,12 +18,19 @@ class NotEnabelKeyLog : public BaseMesg
         "endGame" 
     };
 
+    char input;
+
     public:
         NotEnabelKeyLog ( InputReader* reader );
 
         std::string message () override;
 
         virtual ~NotEnabelKeyLog() = default;
+         // Переопределяем метод для проверки валидности сообщения
+        bool isValid() const override { return valid; }
+    
+    private:
+        bool valid = false; // Добавим флаг для отслеживания валидности сообщения
 };
 
 #endif//NOT_EK_LOG_H

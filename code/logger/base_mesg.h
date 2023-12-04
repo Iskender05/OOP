@@ -10,6 +10,7 @@ public:
     virtual ~BaseMesg () = default;
 
     virtual std::string message () = 0;
+    virtual bool isValid() const { return true; }
 
     friend std::ostream& operator << ( std::ostream &os, BaseMesg &base )
     {

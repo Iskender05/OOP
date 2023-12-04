@@ -78,6 +78,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "/home/upsik_/OOP/code/player/../controller"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/upsik_/OOP/code/reader/../logger"
 				}
 			],
 			"language" : "CXX",
